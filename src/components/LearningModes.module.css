@@ -1,0 +1,117 @@
+.modesSection {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.modesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .modesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.modeCard {
+  background-color: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.modeCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--slate-300);
+}
+
+.modeHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.modeIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: var(--cyan-50);
+  border: 1px solid rgba(2, 132, 199, 0.2);
+  color: var(--cyan-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.modeCard:hover .modeIcon {
+  background-color: var(--navy-900);
+  color: var(--cyan-400);
+}
+
+.modePill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cyan-600);
+  margin-bottom: 4px;
+}
+
+.modeTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navy-900);
+}
+
+.modeDesc {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--slate-600);
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.modeFeatures {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding-top: 16px;
+  border-top: 1px solid var(--slate-100);
+}
+
+.modeFeatureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--slate-700);
+}
+
+.checkIcon {
+  color: var(--cyan-600);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.modeActions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+}

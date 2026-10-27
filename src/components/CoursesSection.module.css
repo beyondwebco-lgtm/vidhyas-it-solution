@@ -1,0 +1,280 @@
+.coursesSection {
+  background-color: var(--white);
+  border-top: 1px solid var(--border-light);
+}
+
+.filterScroll {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  margin-bottom: 40px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.filterScroll::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .filterScroll {
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+}
+
+.filterTab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--slate-600);
+  background-color: var(--slate-100);
+  border: 1px solid var(--slate-200);
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.filterTab:hover {
+  background-color: var(--slate-200);
+  color: var(--navy-900);
+}
+
+.filterTab.active {
+  background-color: var(--navy-900);
+  color: var(--white);
+  border-color: var(--navy-900);
+  box-shadow: var(--shadow-sm);
+}
+
+.filterCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 1px 7px;
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.filterTab:not(.active) .filterCount {
+  background-color: var(--slate-200);
+  color: var(--slate-700);
+}
+
+/* Course Grid */
+.courseGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 640px) {
+  .courseGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .courseGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.courseCard {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: var(--shadow-xs);
+}
+
+.courseCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--slate-300);
+  box-shadow: var(--shadow-lg);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  gap: 12px;
+}
+
+.iconBox {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background-color: var(--cyan-50);
+  border: 1px solid rgba(2, 132, 199, 0.18);
+  color: var(--cyan-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.courseCard:hover .iconBox {
+  background-color: var(--navy-900);
+  color: var(--cyan-400);
+  transform: scale(1.05);
+}
+
+.courseCategoryBadge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--slate-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--slate-100);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  align-self: flex-start;
+}
+
+.courseTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--navy-900);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.courseDesc {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--slate-600);
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.scheduleNote {
+  font-size: 0.775rem;
+  color: var(--slate-500);
+  margin-bottom: 16px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--slate-200);
+}
+
+.cardActions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.enquireBtn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  background-color: var(--white);
+  color: var(--navy-900);
+  border: 1px solid var(--slate-300);
+  transition: all 0.15s ease;
+}
+
+.enquireBtn:hover {
+  background-color: var(--navy-900);
+  color: var(--white);
+  border-color: var(--navy-900);
+}
+
+.quickWaBtn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  background-color: rgba(37, 211, 102, 0.1);
+  color: #0d8a43;
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  transition: all 0.15s ease;
+}
+
+.quickWaBtn:hover {
+  background-color: var(--whatsapp-green);
+  color: var(--white);
+  border-color: var(--whatsapp-green);
+}
+
+/* Looking for another course CTA Banner */
+.customCourseBanner {
+  background: linear-gradient(135deg, var(--navy-950) 0%, var(--navy-850) 100%);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-xl);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--white);
+  box-shadow: var(--shadow-lg);
+}
+
+@media (min-width: 768px) {
+  .customCourseBanner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 48px;
+  }
+}
+
+.customCourseContent {
+  max-width: 600px;
+}
+
+.customCourseTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.customCourseDesc {
+  font-size: 0.95rem;
+  color: var(--slate-300);
+  line-height: 1.6;
+}
+
+.customCourseActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .customCourseActions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .customCourseActions .btn {
+    width: 100%;
+  }
+}
