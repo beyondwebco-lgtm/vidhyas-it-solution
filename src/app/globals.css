@@ -19,9 +19,18 @@
   --cyan-400: #38bdf8;
   --cyan-50: #f0f9ff;
   
-  --whatsapp-green: #25d366;
-  --whatsapp-dark: #128c7e;
-  --whatsapp-hover: #20ba5a;
+  /* Refined Elegant WhatsApp Palette (Muted Pastel Mint & Forest Green) */
+  --wa-bg: #e8f5ec;
+  --wa-bg-hover: #d8eddf;
+  --wa-text: #237a4b;
+  --wa-border: #c5e5d0;
+  --wa-border-hover: #b4dec2;
+  --wa-shadow: 0 1px 3px rgba(35, 122, 75, 0.08);
+  --wa-shadow-hover: 0 3px 8px rgba(35, 122, 75, 0.12);
+
+  --whatsapp-green: #237a4b;
+  --whatsapp-dark: #1b5f3a;
+  --whatsapp-hover: #d8eddf;
 
   /* Neutral Slate Palette */
   --slate-900: #0f172a;
@@ -282,16 +291,31 @@ img {
 }
 
 .btn-whatsapp {
-  background-color: var(--whatsapp-green);
-  color: var(--white);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+  background-color: var(--wa-bg);
+  color: var(--wa-text);
+  border: 1px solid var(--wa-border);
+  font-weight: 600;
+  box-shadow: var(--wa-shadow);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-whatsapp svg {
+  color: var(--wa-text);
+  stroke: var(--wa-text);
+  flex-shrink: 0;
 }
 
 .btn-whatsapp:hover {
-  background-color: var(--whatsapp-hover);
-  color: var(--white);
-  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+  background-color: var(--wa-bg-hover);
+  color: var(--wa-text);
+  border-color: var(--wa-border-hover);
+  box-shadow: var(--wa-shadow-hover);
+  transform: translateY(-1px);
+}
+
+.btn-whatsapp:focus-visible {
+  outline: 2px solid var(--wa-text);
+  outline-offset: 2px;
 }
 
 .btn-outline-white {

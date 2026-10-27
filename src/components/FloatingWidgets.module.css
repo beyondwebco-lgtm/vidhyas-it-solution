@@ -5,20 +5,33 @@
   width: 58px;
   height: 58px;
   border-radius: var(--radius-full);
-  background-color: var(--whatsapp-green);
-  color: var(--white);
+  background-color: var(--wa-bg);
+  color: var(--wa-text);
+  border: 1.5px solid var(--wa-border);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.12), 0 2px 6px rgba(35, 122, 75, 0.16);
   z-index: 990;
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
   touch-action: manipulation;
+}
+
+.floatingWaBtn svg {
+  color: var(--wa-text);
+  stroke: var(--wa-text);
 }
 
 .floatingWaBtn:hover {
   transform: scale(1.08) translateY(-2px);
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.55);
+  background-color: var(--wa-bg-hover);
+  border-color: var(--wa-border-hover);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.16), 0 4px 10px rgba(35, 122, 75, 0.2);
+}
+
+.floatingWaBtn:focus-visible {
+  outline: 2px solid var(--wa-text);
+  outline-offset: 3px;
 }
 
 .floatingWaBtn:active {
@@ -32,7 +45,7 @@
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background-color: #22c55e;
+  background-color: var(--wa-text);
   border: 2px solid var(--white);
 }
 
