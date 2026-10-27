@@ -1,11 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
-import { MessageCircle, ArrowRight } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { COURSE_CATEGORIES, ALL_COURSES, CourseItem } from "@/data/courses";
-import { getCourseWhatsAppUrl, buildWhatsAppUrl } from "@/data/siteConfig";
-import DynamicIcon from "./DynamicIcon";
+import { buildWhatsAppUrl } from "@/data/siteConfig";
+import CourseCard from "./CourseCard";
 import styles from "./CoursesSection.module.css";
 
 export default function CoursesSection() {
@@ -64,48 +63,9 @@ export default function CoursesSection() {
 
         {/* Course Grid */}
         <div className={styles.courseGrid} role="region" aria-live="polite">
-          {filteredCourses.map((course) => {
-            const whatsappUrl = getCourseWhatsAppUrl(course.name);
-
-            return (
-              <article key={course.id} className={styles.courseCard}>
-                <div className={styles.cardHeader}>
-                  <div className={styles.iconBox} aria-hidden="true">
-                    <DynamicIcon name={course.iconName} size={24} strokeWidth={1.8} />
-                  </div>
-                  <span className={styles.courseCategoryBadge}>{course.category}</span>
-                </div>
-
-                <h3 className={styles.courseTitle}>{course.name}</h3>
-                <p className={styles.courseDesc}>{course.description}</p>
-
-                <div className={styles.scheduleNote}>
-                  Flexible timings • Contact for current batch options
-                </div>
-
-                <div className={styles.cardActions}>
-                  <a
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.quickWaBtn}
-                    aria-label={`Enquire about ${course.name} on WhatsApp`}
-                  >
-                    <MessageCircle size={16} aria-hidden="true" />
-                    <span>Enquire on WhatsApp</span>
-                  </a>
-
-                  <Link
-                    href={`#contact?course=${encodeURIComponent(course.name)}`}
-                    className={styles.enquireBtn}
-                  >
-                    <span>Enquire via Form</span>
-                    <ArrowRight size={14} aria-hidden="true" />
-                  </Link>
-                </div>
-              </article>
-            );
-          })}
+          {filteredCourses.map((course) => (
+            <CourseCard key={course.id} course={course} />
+          ))}
         </div>
 
         {/* Looking for another course? CTA Banner */}
