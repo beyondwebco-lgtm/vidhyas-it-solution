@@ -53,7 +53,7 @@ export default function PrivacyModal({ isOpen, onClose }: PrivacyModalProps) {
 
         <div className={styles.modalBody}>
           <p>
-            At <strong>Vidhyas IIT Solution</strong>, located in Suchitra, Hyderabad, Telangana, we respect the privacy of our website visitors, students, and prospective learners.
+            At <strong>Solutions to Academy</strong>, located in Suchitra, Hyderabad, Telangana, we respect the privacy of our website visitors, students, and prospective learners.
           </p>
 
           <h4>Information We Collect</h4>
@@ -73,7 +73,7 @@ export default function PrivacyModal({ isOpen, onClose }: PrivacyModalProps) {
 
           <h4>Location &amp; Contact</h4>
           <p>
-            Vidhyas IIT Solution, Suchitra, Hyderabad, Telangana, India. Phone lines: 9550075296, 7337555268.
+            Solutions to Academy, Suchitra, Hyderabad, Telangana, India. Phone lines: 9550075296, 7337555268.
           </p>
         </div>
 

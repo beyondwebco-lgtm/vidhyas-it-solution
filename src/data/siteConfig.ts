@@ -19,7 +19,7 @@ export interface BusinessConfig {
 }
 
 export const siteConfig: BusinessConfig = {
-  name: "Vidhyas IIT Solution",
+  name: "Solutions to Academy",
   tagline: "Transform Mathematical Fear into Mastery",
   supportingHeadline: "Build a Bulletproof IIT-JEE & Olympiad Foundation Early for Classes 5th to 10th.",
   intro: "We don't teach shortcuts or memorization. We train young minds in Class 5 to 10 to think critically, derive from first principles, and conquer complex mathematical challenges with speed and confidence.",
@@ -55,16 +55,16 @@ export function buildWhatsAppUrl(message: string): string {
 }
 
 export function getDefaultWhatsAppUrl(): string {
-  return buildWhatsAppUrl("Hello Vidhyas IIT Solution, I would like to know more about your Mathematics coaching for Classes 5th to 10th.");
+  return buildWhatsAppUrl("Hello Solutions to Academy, I would like to know more about your Mathematics coaching for Classes 5th to 10th.");
 }
 
 export function getCourseWhatsAppUrl(courseName: string, mode?: string): string {
   if (mode && mode !== "Not Sure") {
     return buildWhatsAppUrl(
-      `Hello Vidhyas IIT Solution, I would like to enquire about the ${courseName} program (${mode} learning mode). Please share batch details and curriculum.`
+      `Hello Solutions to Academy, I would like to enquire about the ${courseName} program (${mode} learning mode). Please share batch details and curriculum.`
     );
   }
   return buildWhatsAppUrl(
-    `Hello Vidhyas IIT Solution, I would like to enquire about the ${courseName} program. Please share syllabus, batch details, and fee structure.`
+    `Hello Solutions to Academy, I would like to enquire about the ${courseName} program. Please share syllabus, batch details, and fee structure.`
   );
 }

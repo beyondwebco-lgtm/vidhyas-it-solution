@@ -6,11 +6,11 @@ import styles from "./LearningModes.module.css";
 
 export default function LearningModes() {
   const materialsWhatsAppUrl = buildWhatsAppUrl(
-    "Hello Vidhyas IIT Solution, I would like to enquire about the 3-Tier Graded Practice Material and Curriculum for my child."
+    "Hello Solutions to Academy, I would like to enquire about the 3-Tier Graded Practice Material and Curriculum for my child."
   );
 
   const diagnosticsWhatsAppUrl = buildWhatsAppUrl(
-    "Hello Vidhyas IIT Solution, I would like to know more about the Weekly Diagnostic Quizzes and Daily Doubt-Clearing Clinics."
+    "Hello Solutions to Academy, I would like to know more about the Weekly Diagnostic Quizzes and Daily Doubt-Clearing Clinics."
   );
 
   return (

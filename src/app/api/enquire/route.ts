@@ -62,7 +62,7 @@ export async function POST(request: Request) {
     };
 
     // Construct tailored WhatsApp link for direct confirmation
-    const waText = `Hello Vidhyas IIT Solution,
+    const waText = `Hello Solutions to Academy,
 My Name: ${sanitizedData.fullName}
 Phone: ${sanitizedData.phone}
 Class/Program: ${sanitizedData.course}

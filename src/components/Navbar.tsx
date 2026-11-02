@@ -57,13 +57,13 @@ export default function Navbar() {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={`container ${styles.navContainer}`}>
         {/* Brand Treatment */}
-        <Link href="#top" className={styles.brand} aria-label="Vidhyas IIT Solution - Mathematics Coaching">
+        <Link href="#top" className={styles.brand} aria-label="Solutions to Academy - Mathematics Coaching">
           <div className={styles.brandIcon} aria-hidden="true">
             <GraduationCap size={22} />
           </div>
           <div className={styles.brandText}>
             <span className={styles.brandName}>
-              Vidhyas <span className={styles.brandAccent}>IIT</span> Solution
+              Solutions to <span className={styles.brandAccent}>Academy</span>
             </span>
             <span className={styles.brandSub}>Mathematics Coaching • Suchitra</span>
           </div>
@@ -87,7 +87,7 @@ export default function Navbar() {
           <a
             href={`tel:${siteConfig.phones[0]}`}
             className={styles.phoneLink}
-            aria-label={`Call Vidhyas IT Solutions at ${siteConfig.phones[0]}`}
+            aria-label={`Call Solutions to Academy at ${siteConfig.phones[0]}`}
           >
             <Phone size={15} aria-hidden="true" />
             <span>{siteConfig.phones[0]}</span>

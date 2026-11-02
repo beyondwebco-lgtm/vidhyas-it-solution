@@ -16,7 +16,7 @@ export default function FloatingWidgets() {
         target="_blank"
         rel="noopener noreferrer"
         className={styles.floatingWaBtn}
-        aria-label="Chat on WhatsApp with Vidhyas IIT Solution"
+        aria-label="Chat on WhatsApp with Solutions to Academy"
         title="Chat on WhatsApp"
       >
         <span className={styles.ping} aria-hidden="true" />
@@ -28,7 +28,7 @@ export default function FloatingWidgets() {
         <a
           href={`tel:${siteConfig.phones[0]}`}
           className={styles.callFab}
-          aria-label={`Call Vidhyas IIT Solution at ${siteConfig.phones[0]}`}
+          aria-label={`Call Solutions to Academy at ${siteConfig.phones[0]}`}
         >
           <Phone size={14} aria-hidden="true" />
           <span>Call Now</span>
