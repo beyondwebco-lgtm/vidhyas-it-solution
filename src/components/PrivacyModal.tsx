@@ -53,17 +53,17 @@ export default function PrivacyModal({ isOpen, onClose }: PrivacyModalProps) {
 
         <div className={styles.modalBody}>
           <p>
-            At <strong>Vidhyas IT Solutions</strong>, located in Suchitra, Hyderabad, Telangana, we respect the privacy of our website visitors, students, and prospective learners.
+            At <strong>Jeet Kumar Raja - Mathematics Coaching</strong>, located in Suchitra, Hyderabad, Telangana, we respect the privacy of our website visitors, students, and prospective learners.
           </p>
 
           <h4>Information We Collect</h4>
           <p>
-            When you submit an enquiry form or message us via WhatsApp, we collect information you voluntarily provide, such as your full name, mobile number, course of interest, training mode preference, and optional questions.
+            When you submit an enquiry form or message us via WhatsApp, we collect information you voluntarily provide, such as your full name, mobile number, grade or module of interest, learning mode preference, and optional questions.
           </p>
 
           <h4>How We Use Your Information</h4>
           <p>
-            We use this information strictly to provide you with requested details regarding course curriculum, class schedules, fee structures, and enrollment counseling. We do not sell, rent, or trade your personal information to third parties or marketing brokers.
+            We use this information strictly to provide you with requested details regarding mathematics curriculum, diagnostic evaluations, batch schedules, fee structures, and enrollment counseling. We do not sell, rent, or trade your personal information to third parties.
           </p>
 
           <h4>Communication Preferences</h4>
@@ -73,7 +73,7 @@ export default function PrivacyModal({ isOpen, onClose }: PrivacyModalProps) {
 
           <h4>Location &amp; Contact</h4>
           <p>
-            Vidhyas IT Solutions, Suchitra, Hyderabad, Telangana, India. Phone lines: 9550075296, 7337555268.
+            Jeet Kumar Raja - Mathematics Coaching, Suchitra, Hyderabad, Telangana, India. Phone lines: 9550075296, 7337555268.
           </p>
         </div>
 

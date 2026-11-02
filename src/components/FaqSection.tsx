@@ -17,12 +17,12 @@ export default function FaqSection() {
     <section id="faq" className={`section-padding ${styles.faqSection}`} aria-labelledby="faq-heading">
       <div className="container">
         <div className="section-header">
-          <span className="section-eyebrow">Common Questions</span>
+          <span className="section-eyebrow">Parent Inquiries</span>
           <h2 id="faq-heading" className="section-title">
-            Frequently Asked Questions
+            Frequently Asked Questions (FAQ for Parents)
           </h2>
           <p className="section-desc">
-            Find factual answers to common inquiries regarding our courses, location in Suchitra Hyderabad, learning modes, and enrollment process.
+            Clear answers for parents on managing school curriculum alongside foundation classes, building conceptual confidence, and preparing for IIT-JEE and Olympiads early.
           </p>
         </div>
 

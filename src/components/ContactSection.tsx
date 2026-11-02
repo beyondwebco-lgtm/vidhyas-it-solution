@@ -103,12 +103,12 @@ export default function ContactSection() {
     } catch {
       // Fallback gracefully to direct WhatsApp URL if fetch fails
       const fallbackUrl = buildWhatsAppUrl(
-        `Hello Vidhyas IT Solutions,
+        `Hello Jeet Sir,
 Name: ${formData.fullName}
 Phone: ${formData.phone}
-Course: ${formData.course}
+Class/Program: ${formData.course}
 Mode: ${formData.mode}
-${formData.message ? `Notes: ${formData.message}` : "Please share batch details and fee structure."}`
+${formData.message ? `Notes: ${formData.message}` : "Please share batch details, diagnostic assessment, and fee structure."}`
       );
       setWhatsappFallbackUrl(fallbackUrl);
       setSubmitSuccess(true);
@@ -134,12 +134,12 @@ ${formData.message ? `Notes: ${formData.message}` : "Please share batch details 
     <section id="contact" className={`section-padding ${styles.contactSection}`} aria-labelledby="contact-heading">
       <div className="container">
         <div className="section-header">
-          <span className="section-eyebrow">Connect With Us</span>
+          <span className="section-eyebrow">Admissions &amp; Diagnostic Assessment</span>
           <h2 id="contact-heading" className="section-title">
-            Start Your Learning Journey Today
+            Unlock Your Child&apos;s True Mathematical Potential
           </h2>
           <p className="section-desc">
-            Get in touch with our team for course details, upcoming batch schedules, or fee inquiries. We are here to guide you.
+            Don&apos;t wait until Class 11 to discover foundational learning gaps. Give your child the competitive edge of mathematical intuition and confidence today.
           </p>
         </div>
 
@@ -147,10 +147,10 @@ ${formData.message ? `Notes: ${formData.message}` : "Please share batch details 
           {/* Left: Business Info Card */}
           <div className={styles.infoColumn}>
             <div className={styles.infoCard}>
-              <span className={styles.infoEyebrow}>Headquarters &amp; Training Centre</span>
+              <span className={styles.infoEyebrow}>Premier Mathematics Coaching</span>
               <h3 className={styles.instituteName}>{siteConfig.name}</h3>
               <p className={styles.infoIntro}>
-                Empowering students, career changers, and working professionals with job-oriented IT and non-IT skills.
+                Transform Mathematical Fear into Mastery: Build a Bulletproof IIT-JEE &amp; Olympiad Foundation Early for Classes 5th to 10th.
               </p>
 
               <div className={styles.contactList}>
@@ -217,7 +217,7 @@ ${formData.message ? `Notes: ${formData.message}` : "Please share batch details 
             <div className={styles.formHeader}>
               <h3 className={styles.formTitle}>Send an Enquiry</h3>
               <p className={styles.formSubtitle}>
-                Fill out the details below and our counseling team will get back to you with syllabus and fee details.
+                Fill out the details below to schedule a diagnostic test or enquire about Class 5 to 10 batches.
               </p>
             </div>
 
@@ -226,7 +226,7 @@ ${formData.message ? `Notes: ${formData.message}` : "Please share batch details 
                 <CheckCircle2 size={44} color="#059669" style={{ margin: "0 auto" }} />
                 <h4 className={styles.successTitle}>Enquiry Received!</h4>
                 <p className={styles.successDesc}>
-                  Thank you for contacting Vidhyas IT Solutions. Our team will review your enquiry and get back to you shortly.
+                  Thank you for contacting Jeet Kumar Raja Mathematics Coaching. We will review your enquiry and get back to you shortly.
                 </p>
 
                 {whatsappFallbackUrl && (
@@ -324,7 +324,7 @@ ${formData.message ? `Notes: ${formData.message}` : "Please share batch details 
                 {/* Course Interested In */}
                 <div className={styles.fieldGroup}>
                   <label htmlFor="course" className={styles.fieldLabel}>
-                    Course Interested In <span className={styles.requiredStar}>*</span>
+                    Grade / Program Interested In <span className={styles.requiredStar}>*</span>
                   </label>
                   <select
                     id="course"
@@ -337,13 +337,23 @@ ${formData.message ? `Notes: ${formData.message}` : "Please share batch details 
                     aria-required="true"
                     aria-invalid={!!errors.course}
                   >
-                    <option value="">-- Select a Course --</option>
-                    {ALL_COURSES.map((c) => (
-                      <option key={c.id} value={c.name}>
-                        {c.name} ({c.category})
-                      </option>
-                    ))}
-                    <option value="Other / Custom Course">Other / Custom Course</option>
+                    <option value="">-- Select Grade or Program --</option>
+                    <optgroup label="Comprehensive Grade Pathways">
+                      <option value="Class 5: Sub-Junior Foundation">Class 5: Sub-Junior Foundation</option>
+                      <option value="Class 6: Junior Foundation – Level 1">Class 6: Junior Foundation – Level 1</option>
+                      <option value="Class 7: Junior Foundation – Level 2">Class 7: Junior Foundation – Level 2</option>
+                      <option value="Class 8: Pre-Senior Foundation">Class 8: Pre-Senior Foundation</option>
+                      <option value="Class 9: Senior Foundation – Level 1">Class 9: Senior Foundation – Level 1</option>
+                      <option value="Class 10: Senior Foundation – Level 2 & JEE Bridge">Class 10: Senior Foundation – Level 2 & JEE Bridge</option>
+                      <option value="Diagnostic Assessment Test">Diagnostic Assessment Test (1-on-1)</option>
+                    </optgroup>
+                    <optgroup label="Specific Curriculum Modules">
+                      {ALL_COURSES.map((c) => (
+                        <option key={c.id} value={`${c.name} (${c.category})`}>
+                          {c.name} ({c.category})
+                        </option>
+                      ))}
+                    </optgroup>
                   </select>
                   {errors.course && (
                     <span className={styles.errorMessage}>{errors.course}</span>
@@ -381,7 +391,7 @@ ${formData.message ? `Notes: ${formData.message}` : "Please share batch details 
                     id="message"
                     name="message"
                     rows={3}
-                    placeholder="Tell us about your background, preferred timing, or questions..."
+                    placeholder="Tell us about your child's current school, math performance, or targets..."
                     value={formData.message}
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
@@ -400,7 +410,7 @@ ${formData.message ? `Notes: ${formData.message}` : "Please share batch details 
                     <span>Submitting Enquiry...</span>
                   ) : (
                     <>
-                      <span>Submit Course Enquiry</span>
+                      <span>Submit Coaching Enquiry</span>
                       <Send size={16} aria-hidden="true" />
                     </>
                   )}

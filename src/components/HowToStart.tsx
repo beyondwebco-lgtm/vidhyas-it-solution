@@ -5,20 +5,20 @@ import styles from "./HowToStart.module.css";
 const STEPS = [
   {
     number: "01",
-    title: "Choose Your Course",
-    description: "Browse our IT and non-IT course catalog and select the subject that aligns with your educational background and career goals.",
+    title: "Select Grade & Target",
+    description: "Choose your child's current school grade (Class 5 to 10) and primary target: School Exam Mastery, Olympiads (IOQM/NMTC), or IIT-JEE Foundation.",
     icon: BookOpen,
   },
   {
     number: "02",
-    title: "Contact Our Team",
-    description: "Connect with us on WhatsApp or call our Suchitra centre directly to discuss your interest and query batch details.",
+    title: "Diagnostic Assessment",
+    description: "Connect with us on WhatsApp or call to schedule a baseline conceptual diagnostic evaluation to pinpoint learning strengths and gaps.",
     icon: PhoneCall,
   },
   {
     number: "03",
-    title: "Discuss Training Options",
-    description: "Talk with our counselors about offline or online batches, syllabus overview, fee structure, and start dates.",
+    title: "Personalized Batch Allocation",
+    description: "Enroll in an appropriate small cohort with graded 3-tier practice worksheets, daily doubt-resolution clinics, and monthly analytics reports.",
     icon: MessagesSquare,
   },
 ];
@@ -28,12 +28,12 @@ export default function HowToStart() {
     <section className={`section-padding ${styles.startSection}`} aria-labelledby="start-heading">
       <div className="container">
         <div className="section-header">
-          <span className="section-eyebrow">Simple 3-Step Process</span>
+          <span className="section-eyebrow">Admissions &amp; Roadmap</span>
           <h2 id="start-heading" className="section-title">
             How to Get Started
           </h2>
           <p className="section-desc">
-            Beginning your practical training journey at Vidhyas IT Solutions is simple, direct, and transparent.
+            Beginning your child&apos;s journey from mathematical fear to competitive mastery is structured, transparent, and diagnostic-led.
           </p>
         </div>
 

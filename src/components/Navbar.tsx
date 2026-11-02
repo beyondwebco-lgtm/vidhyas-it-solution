@@ -8,10 +8,11 @@ import styles from "./Navbar.module.css";
 
 const NAV_ITEMS = [
   { label: "Home", href: "#top" },
-  { label: "About Us", href: "#about" },
-  { label: "Courses", href: "#courses" },
-  { label: "Why Choose Us", href: "#why-us" },
-  { label: "Learning Modes", href: "#learning-modes" },
+  { label: "About", href: "#about" },
+  { label: "Curriculum", href: "#courses" },
+  { label: "Why Start Early", href: "#why-us" },
+  { label: "Ecosystem", href: "#learning-modes" },
+  { label: "FAQs", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -56,15 +57,15 @@ export default function Navbar() {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={`container ${styles.navContainer}`}>
         {/* Brand Treatment */}
-        <Link href="#top" className={styles.brand} aria-label="Vidhyas IT Solutions - Home">
+        <Link href="#top" className={styles.brand} aria-label="Jeet Kumar Raja - Mathematics Coaching">
           <div className={styles.brandIcon} aria-hidden="true">
             <GraduationCap size={22} />
           </div>
           <div className={styles.brandText}>
             <span className={styles.brandName}>
-              Vidhyas <span className={styles.brandAccent}>IT</span>
+              Jeet Kumar <span className={styles.brandAccent}>Raja</span>
             </span>
-            <span className={styles.brandSub}>Solutions • Suchitra</span>
+            <span className={styles.brandSub}>Mathematics Coaching • Suchitra</span>
           </div>
         </Link>
 

@@ -1,44 +1,36 @@
 import React from "react";
 import {
-  Users,
-  Terminal,
-  MonitorCheck,
-  Clock,
-  BadgePercent,
-  Compass,
+  BrainCircuit,
+  Cpu,
+  TrendingUp,
+  Award,
 } from "lucide-react";
 import styles from "./WhyChooseUs.module.css";
 
-const BENEFITS = [
+const ADVANTAGES = [
   {
-    title: "Expert Trainers",
-    description: "Guidance from trainers with relevant experience in programming, software tools, and domain practice.",
-    icon: Users,
+    title: "Deconstruct Rote Learning",
+    description:
+      "Traditional schooling rewards pattern-matching and mechanical calculation. We teach students why a theorem works before showing how to apply it.",
+    icon: BrainCircuit,
   },
   {
-    title: "Practical Training",
-    description: "Emphasis on hands-on learning and skill development through practical exercises and real-world scenarios.",
-    icon: Terminal,
+    title: "Cultivate Algorithmic & Logical Thinking",
+    description:
+      "Mathematics is the gym for analytical thinking. Early mastery builds structural reasoning applicable to Physics, Computer Science, and competitive exams.",
+    icon: Cpu,
   },
   {
-    title: "Lab Facility",
-    description: "A supportive learning environment equipped for practical computer exercises, code execution, and guided practice.",
-    icon: MonitorCheck,
+    title: "Eliminate Future JEE Shock",
+    description:
+      "JEE Advanced tests non-routine synthesis across multiple topics. Starting in Class 5–8 builds mental stamina without high-stakes academic pressure.",
+    icon: TrendingUp,
   },
   {
-    title: "Flexible Learning",
-    description: "Convenient offline classroom sessions at our Suchitra centre as well as interactive online class options.",
-    icon: Clock,
-  },
-  {
-    title: "Affordable Fees",
-    description: "Courses designed with affordability in mind to make quality skill education accessible to students and professionals.",
-    icon: BadgePercent,
-  },
-  {
-    title: "Career Guidance",
-    description: "Personalized guidance to help learners plan their next steps, choose the right course, and build job-relevant skills.",
-    icon: Compass,
+    title: "Excellence in National & Global Olympiads",
+    description:
+      "Direct preparation for prestigious contests including IOQM (Indian Olympiad Qualifier in Mathematics), NMTC (National Mathematics Talent Contests), AMC 8/10, and Aryabhata Competitions.",
+    icon: Award,
   },
 ];
 
@@ -47,25 +39,25 @@ export default function WhyChooseUs() {
     <section id="why-us" className={`section-padding ${styles.whyUsSection}`} aria-labelledby="why-us-heading">
       <div className="container">
         <div className="section-header">
-          <span className="section-eyebrow">Our Core Strengths</span>
+          <span className="section-eyebrow">The IIT Foundation Advantage</span>
           <h2 id="why-us-heading" className="section-title">
-            Why Choose Vidhyas IT Solutions?
+            Why Start Early? The IIT Foundation Advantage
           </h2>
           <p className="section-desc">
-            We focus on real skills, supportive mentoring, and practical training to help you advance your career with clarity.
+            Most students struggle in Class 11 and 12 not because of the syllabus volume, but because their foundational mathematical intuition was never developed in middle school.
           </p>
         </div>
 
         <div className={styles.benefitsGrid}>
-          {BENEFITS.map((b) => {
-            const Icon = b.icon;
+          {ADVANTAGES.map((item) => {
+            const Icon = item.icon;
             return (
-              <div key={b.title} className={styles.benefitCard}>
+              <div key={item.title} className={styles.benefitCard}>
                 <div className={styles.iconWrapper} aria-hidden="true">
                   <Icon size={26} strokeWidth={1.8} />
                 </div>
-                <h3 className={styles.benefitTitle}>{b.title}</h3>
-                <p className={styles.benefitDesc}>{b.description}</p>
+                <h3 className={styles.benefitTitle}>{item.title}</h3>
+                <p className={styles.benefitDesc}>{item.description}</p>
               </div>
             );
           })}

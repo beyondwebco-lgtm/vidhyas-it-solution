@@ -19,10 +19,10 @@ export interface BusinessConfig {
 }
 
 export const siteConfig: BusinessConfig = {
-  name: "Vidhyas IT Solutions",
-  tagline: "Build Your Skills. Shape Your Future.",
-  supportingHeadline: "Job-Oriented IT & Non-IT Courses with Practical Training and Career Guidance.",
-  intro: "At Vidhyas IT Solutions, we provide practical, skill-focused training with expert guidance to help students, job seekers, and working professionals develop valuable skills for their careers. Choose from a wide range of IT and non-IT courses, with offline and online learning options.",
+  name: "Jeet Kumar Raja",
+  tagline: "Transform Mathematical Fear into Mastery",
+  supportingHeadline: "Build a Bulletproof IIT-JEE & Olympiad Foundation Early for Classes 5th to 10th.",
+  intro: "We don't teach shortcuts or memorization. We train young minds in Class 5 to 10 to think critically, derive from first principles, and conquer complex mathematical challenges with speed and confidence.",
   location: {
     area: "Suchitra",
     city: "Hyderabad",
@@ -36,9 +36,10 @@ export const siteConfig: BusinessConfig = {
   secondaryPhone: "7337555268",
   baseUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://vidhyasitsolutions.com",
   trustPoints: [
-    "Practical Learning",
-    "Online & Offline Classes",
-    "Career Guidance",
+    "100% Concept-First Approach: Rigorous proofs & deep intuition",
+    "3-Tier Graded Problem Sets: School mastery to Olympiads",
+    "Class 5 to 10 Continuous Pathway: Transition into JEE Advanced",
+    "Small Batch Mentorship: Dedicated doubt-resolution clinics",
   ],
 };
 
@@ -54,16 +55,16 @@ export function buildWhatsAppUrl(message: string): string {
 }
 
 export function getDefaultWhatsAppUrl(): string {
-  return buildWhatsAppUrl("Hello Vidhyas IT Solutions, I would like to know more about your courses.");
+  return buildWhatsAppUrl("Hello Jeet Sir, I would like to know more about your Mathematics coaching for Classes 5th to 10th.");
 }
 
 export function getCourseWhatsAppUrl(courseName: string, mode?: string): string {
   if (mode && mode !== "Not Sure") {
     return buildWhatsAppUrl(
-      `Hello Vidhyas IT Solutions, I would like to enquire about the ${courseName} course (${mode} training mode). Please share details.`
+      `Hello Jeet Sir, I would like to enquire about the ${courseName} program (${mode} learning mode). Please share batch details and curriculum.`
     );
   }
   return buildWhatsAppUrl(
-    `Hello Vidhyas IT Solutions, I would like to enquire about the ${courseName} course. Please share curriculum, batch details, and fee structure.`
+    `Hello Jeet Sir, I would like to enquire about the ${courseName} program. Please share syllabus, batch details, and fee structure.`
   );
 }

@@ -14,7 +14,7 @@ interface CourseCardProps {
  * Displays course information with a single direct WhatsApp enquiry button.
  */
 export default function CourseCard({ course }: CourseCardProps) {
-  const whatsappUrl = getCourseWhatsAppUrl(course.name);
+  const whatsappUrl = getCourseWhatsAppUrl(`${course.name} (${course.category})`);
 
   return (
     <article className={styles.courseCard}>
@@ -28,9 +28,12 @@ export default function CourseCard({ course }: CourseCardProps) {
       <h3 className={styles.courseTitle}>{course.name}</h3>
       <p className={styles.courseDesc}>{course.description}</p>
 
-      <div className={styles.scheduleNote}>
-        Flexible timings • Contact for current batch options
-      </div>
+      {course.olympiadEdge && (
+        <div className={styles.scheduleNote}>
+          <span style={{ fontWeight: 600, color: "#0A192F" }}>Olympiad Edge: </span>
+          <span>{course.olympiadEdge}</span>
+        </div>
+      )}
 
       <div className={styles.cardActions}>
         <a

@@ -27,11 +27,11 @@ export default function Footer({ currentYear = 2026 }: FooterProps) {
                   <GraduationCap size={20} />
                 </div>
                 <span className={styles.brandName}>
-                  Vidhyas <span className={styles.brandAccent}>IT</span> Solutions
+                  Jeet Kumar <span className={styles.brandAccent}>Raja</span>
                 </span>
               </div>
               <p className={styles.brandDesc}>
-                {siteConfig.supportingHeadline} Providing practical training, hands-on lab exercises, and career guidance in Suchitra, Hyderabad.
+                {siteConfig.intro} Providing concept-first mathematics coaching and IIT-JEE foundation in Suchitra, Hyderabad.
               </p>
               <div style={{ marginTop: "auto" }}>
                 <a
@@ -57,45 +57,45 @@ export default function Footer({ currentYear = 2026 }: FooterProps) {
                 </li>
                 <li>
                   <Link href="#about" className={styles.footerLink}>
-                    About Us
+                    About Methodology
                   </Link>
                 </li>
                 <li>
                   <Link href="#courses" className={styles.footerLink}>
-                    Our Courses
+                    Curriculum (Classes 5-10)
                   </Link>
                 </li>
                 <li>
                   <Link href="#why-us" className={styles.footerLink}>
-                    Why Choose Us
+                    Why Start Early
                   </Link>
                 </li>
                 <li>
                   <Link href="#learning-modes" className={styles.footerLink}>
-                    Learning Modes
+                    Classroom Ecosystem
                   </Link>
                 </li>
                 <li>
                   <Link href="#faq" className={styles.footerLink}>
-                    FAQs
+                    FAQs for Parents
                   </Link>
                 </li>
                 <li>
                   <Link href="#contact" className={styles.footerLink}>
-                    Contact
+                    Contact &amp; Admissions
                   </Link>
                 </li>
               </ul>
             </div>
 
-            {/* Column 3: Course Categories */}
+            {/* Column 3: Grade Pathways */}
             <div>
-              <h3 className={styles.footerHeading}>Course Categories</h3>
+              <h3 className={styles.footerHeading}>Grade Pathways</h3>
               <ul className={styles.linkList}>
                 {COURSE_CATEGORIES.map((cat) => (
                   <li key={cat.id}>
                     <Link href="#courses" className={styles.footerLink}>
-                      {cat.title}
+                      {cat.title}: {cat.badge}
                     </Link>
                   </li>
                 ))}

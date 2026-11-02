@@ -7,44 +7,26 @@ export interface FaqItem {
 export const FAQS: FaqItem[] = [
   {
     id: "faq-1",
-    question: "What courses are available at Vidhyas IT Solutions?",
+    question: "Will this program overload my child alongside regular school homework?",
     answer:
-      "Vidhyas IT Solutions offers a diverse range of IT and non-IT courses including Python, Java, C, C++, Web Technologies, Java Full Stack, Python Full Stack, Advanced Excel, Power BI, Tableau, Artificial Intelligence and Machine Learning (AI/ML), SAP, MS Office, TallyPrime, Spoken English, IELTS, PTE, French, German, and School Tuitions.",
+      "No. Our curriculum is designed to complement and elevate school performance. Because we build first-principles understanding, school mathematics becomes intuitive, effortless, and substantially faster for the student to complete.",
   },
   {
     id: "faq-2",
-    question: "Where is Vidhyas IT Solutions located?",
+    question: "My child finds math intimidating. Is this program suitable only for math prodigies?",
     answer:
-      "Vidhyas IT Solutions is located in Suchitra, Hyderabad, Telangana, India. Our institute is easily accessible for students and professionals across Suchitra, Kompally, Jeedimetla, Alwal, and nearby areas in North Hyderabad.",
+      "Our foundation courses start from the ground up. We believe mathematical ability is a developed skill, not an innate trait. By dismantling rote memorization and rebuilding concepts visually and logically, we regularly transform anxious students into confident problem solvers.",
   },
   {
     id: "faq-3",
-    question: "Are online classes available?",
+    question: "How does starting in Class 5 or 6 help for an exam taken in Class 12 (JEE Advanced)?",
     answer:
-      "Yes, online learning options are available for many of our courses. Learners can attend interactive classes remotely. Please contact our team directly via WhatsApp or phone to confirm online batch timings and availability for your selected course.",
+      "JEE Advanced requires deep problem synthesis, sustained analytical stamina, and multi-concept application. Developing this mindset takes years of consistent exposure to non-routine problems. Students who start in middle school absorb higher concepts naturally without experiencing stress in senior secondary school.",
   },
   {
     id: "faq-4",
-    question: "Are offline classes available?",
+    question: "How do you measure my child's improvement?",
     answer:
-      "Yes, offline classroom training is conducted at our training institute in Suchitra, Hyderabad. Offline learners have access to our classroom environment and lab facility for practical practice.",
-  },
-  {
-    id: "faq-5",
-    question: "How can I enquire about course fees?",
-    answer:
-      "To enquire about course fees, please contact us by phone at 9550075296 or 7337555268, click the 'Enquire on WhatsApp' button, or submit the enquiry form on this website. Our team will provide current fee details, ongoing batch options, and payment guidance.",
-  },
-  {
-    id: "faq-6",
-    question: "Which course is suitable for beginners?",
-    answer:
-      "For beginners starting their journey in programming, Python, C, and Web Technologies are widely recommended. For general office and business skills, MS Office, Advanced Excel, or Spoken English are great choices. Since the right choice depends on your educational background and career goals, we encourage you to contact our team for personalized guidance.",
-  },
-  {
-    id: "faq-7",
-    question: "How can I contact the institute?",
-    answer:
-      "You can contact Vidhyas IT Solutions by calling 9550075296 or 7337555268, messaging us directly on WhatsApp, or submitting your details via the enquiry form on this page. Our team will assist you with batch schedules, course information, and enrollment guidance.",
+      "Through weekly diagnostic evaluations, error-log tracking, and comprehensive monthly performance reviews. We track conceptual accuracy, calculation speed, and independent problem-solving ability.",
   },
 ];

@@ -11,7 +11,7 @@ export default function CoursesSection() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
   const categories = [
-    { id: "all", title: "All Courses", count: ALL_COURSES.length },
+    { id: "all", title: "All Classes", count: ALL_COURSES.length },
     ...COURSE_CATEGORIES.map((c) => ({
       id: c.id,
       title: c.title,
@@ -19,13 +19,15 @@ export default function CoursesSection() {
     })),
   ];
 
+  const currentCategoryObj = COURSE_CATEGORIES.find((c) => c.id === selectedCategory);
+
   const filteredCourses: CourseItem[] =
     selectedCategory === "all"
       ? ALL_COURSES
-      : COURSE_CATEGORIES.find((c) => c.id === selectedCategory)?.courses || [];
+      : currentCategoryObj?.courses || [];
 
-  const customCourseWhatsAppUrl = buildWhatsAppUrl(
-    "Hello Vidhyas IT Solutions, I am looking for a course that is not listed on your website. Could you please let me know if it is available?"
+  const diagnosticWhatsAppUrl = buildWhatsAppUrl(
+    "Hello Jeet Sir, I would like to schedule a conceptual diagnostic evaluation test for my child."
   );
 
   return (
@@ -33,17 +35,17 @@ export default function CoursesSection() {
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
-          <span className="section-eyebrow">Comprehensive Catalog</span>
+          <span className="section-eyebrow">Classes 5th to 10th Pathway</span>
           <h2 id="courses-heading" className="section-title">
-            Explore Our Courses
+            Comprehensive Class-by-Class Mathematics Curriculum
           </h2>
           <p className="section-desc">
-            Choose the right course to build your knowledge, improve your skills, and prepare for your next opportunity.
+            Rigorous, proof-oriented mathematics curriculum engineered to transition students from foundational curiosity to high-tier Olympiad and IIT-JEE Advanced mastery.
           </p>
         </div>
 
         {/* Category Tabs */}
-        <div className={styles.filterScroll} role="tablist" aria-label="Course Categories">
+        <div className={styles.filterScroll} role="tablist" aria-label="Class Curriculum Levels">
           {categories.map((tab) => {
             const isActive = selectedCategory === tab.id;
             return (
@@ -61,6 +63,22 @@ export default function CoursesSection() {
           })}
         </div>
 
+        {/* Current Class Focus Note */}
+        {currentCategoryObj && (
+          <div style={{
+            background: "#F8FAFC",
+            border: "1px solid #E2E8F0",
+            borderRadius: "10px",
+            padding: "16px 20px",
+            marginBottom: "28px",
+            fontSize: "0.95rem",
+            color: "#334155"
+          }}>
+            <strong style={{ color: "#0A192F" }}>{currentCategoryObj.subtitle}:</strong>{" "}
+            <span>Focus: {currentCategoryObj.description}</span>
+          </div>
+        )}
+
         {/* Course Grid */}
         <div className={styles.courseGrid} role="region" aria-live="polite">
           {filteredCourses.map((course) => (
@@ -68,25 +86,25 @@ export default function CoursesSection() {
           ))}
         </div>
 
-        {/* Looking for another course? CTA Banner */}
+        {/* Diagnostic Assessment CTA Banner */}
         <div className={styles.customCourseBanner}>
           <div className={styles.customCourseContent}>
-            <span className="section-eyebrow on-dark">Custom &amp; Specialized Inquiries</span>
-            <h3 className={styles.customCourseTitle}>Looking for another course?</h3>
+            <span className="section-eyebrow on-dark">Baseline Evaluation</span>
+            <h3 className={styles.customCourseTitle}>Schedule a Concept Diagnostic Test</h3>
             <p className={styles.customCourseDesc}>
-              Do not see the exact technology, academic subject, or tool you want to learn? Contact our academic counselors in Suchitra, Hyderabad to check customized curriculum and ongoing batch schedules.
+              Not sure which grade level or Olympiad track is appropriate? We conduct 1-on-1 diagnostic evaluations to identify gaps in arithmetic, deductive geometry, and algebraic modeling before recommending batch placement.
             </p>
           </div>
 
           <div className={styles.customCourseActions}>
             <a
-              href={customCourseWhatsAppUrl}
+              href={diagnosticWhatsAppUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-whatsapp"
             >
               <MessageCircle size={18} aria-hidden="true" />
-              <span>Ask About Other Courses</span>
+              <span>Book Diagnostic Test</span>
             </a>
           </div>
         </div>

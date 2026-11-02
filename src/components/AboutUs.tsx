@@ -13,28 +13,28 @@ export default function AboutUs() {
           <div className={styles.imageCard}>
             <Image
               src="/images/about-lab.jpg"
-              alt="Students and trainer in a hands-on learning session at Vidhyas IT Solutions, Suchitra, Hyderabad"
+              alt="Jeet Kumar Raja - 3-Pillar Learning Framework for Mathematics Coaching"
               fill
               sizes="(max-width: 1024px) 100vw, 520px"
               className={styles.image}
             />
             <div className={styles.imageFloatingPill}>
               <Sparkles size={14} color="#0284c7" />
-              <span>Skill-First Learning</span>
+              <span>3-Pillar Learning Framework</span>
             </div>
           </div>
         </div>
 
         {/* Right Column: Narrative */}
         <div className={styles.aboutContent}>
-          <span className="section-eyebrow">About Vidhyas IT Solutions</span>
+          <span className="section-eyebrow">Teaching Methodology</span>
           
           <h2 id="about-heading" className={styles.aboutTitle}>
-            Learn Today. Grow Tomorrow.
+            Our 3-Pillar Learning Framework
           </h2>
 
           <p className={styles.aboutText}>
-            Vidhyas IT Solutions is a training institute located in Suchitra, Hyderabad, offering a range of IT and non-IT courses for students, job seekers, and working professionals. Our focus is on practical learning, skill development, and career guidance to help learners take the next step with confidence.
+            Our classroom methodology dismantles rote memorization and rebuilds concepts visually and logically. We train students from Class 5 to 10 to develop deep problem synthesis and sustained analytical stamina for Olympiads and JEE Advanced.
           </p>
 
           <div className={styles.featuresList}>
@@ -43,7 +43,7 @@ export default function AboutUs() {
                 <Check size={13} strokeWidth={3} />
               </span>
               <span>
-                <strong>Accessible Location:</strong> Situated in Suchitra, Hyderabad, connecting students from Kompally, Jeedimetla, and North Hyderabad.
+                <strong>1. Conceptual Grounding (Concrete to Abstract):</strong> Every formula is derived from first principles. Students understand geometric representations of algebraic identities and visual proofs of theorems.
               </span>
             </div>
 
@@ -52,7 +52,7 @@ export default function AboutUs() {
                 <Check size={13} strokeWidth={3} />
               </span>
               <span>
-                <strong>Curriculum That Matters:</strong> Focused on practical programming, tools, and office technologies demanded by today&apos;s workplace.
+                <strong>2. Mental Agility &amp; Vedic Precision:</strong> Integrating rapid arithmetic techniques, mental algebra, and number sense to reduce calculation errors and increase execution speed.
               </span>
             </div>
 
@@ -61,20 +61,20 @@ export default function AboutUs() {
                 <Check size={13} strokeWidth={3} />
               </span>
               <span>
-                <strong>Dual Mode Learning:</strong> Choose between classroom lab instruction or live online classes based on your convenience.
+                <strong>3. Challenger-Level Problem Solving:</strong> Exposure to multi-concept, non-routine problems that force students to synthesize ideas across geometry, algebra, and number theory.
               </span>
             </div>
           </div>
 
           <div className={styles.actionRow}>
             <Link href="#courses" className="btn btn-primary">
-              <span>Explore Our Courses</span>
+              <span>Explore Curriculum</span>
               <ArrowRight size={16} aria-hidden="true" />
             </Link>
 
             <Link href="#contact" className="btn btn-secondary">
               <MapPin size={16} aria-hidden="true" />
-              <span>Visit Our Suchitra Centre</span>
+              <span>Schedule Assessment</span>
             </Link>
           </div>
         </div>

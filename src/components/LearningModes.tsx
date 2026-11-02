@@ -5,120 +5,132 @@ import { buildWhatsAppUrl } from "@/data/siteConfig";
 import styles from "./LearningModes.module.css";
 
 export default function LearningModes() {
-  const offlineWhatsAppUrl = buildWhatsAppUrl(
-    "Hello Vidhyas IT Solutions, I would like to enquire about Classroom Offline Training at your Suchitra centre."
+  const materialsWhatsAppUrl = buildWhatsAppUrl(
+    "Hello Jeet Sir, I would like to enquire about the 3-Tier Graded Practice Material and Curriculum for my child."
   );
 
-  const onlineWhatsAppUrl = buildWhatsAppUrl(
-    "Hello Vidhyas IT Solutions, I would like to enquire about Online Training options."
+  const diagnosticsWhatsAppUrl = buildWhatsAppUrl(
+    "Hello Jeet Sir, I would like to know more about the Weekly Diagnostic Quizzes and Daily Doubt-Clearing Clinics."
   );
 
   return (
     <section id="learning-modes" className={`section-padding ${styles.modesSection}`} aria-labelledby="modes-heading">
       <div className="container">
         <div className="section-header">
-          <span className="section-eyebrow">Flexible Options</span>
+          <span className="section-eyebrow">Classroom Ecosystem</span>
           <h2 id="modes-heading" className="section-title">
-            Learn the Way That Works for You
+            Classroom Ecosystem &amp; Deliverables
           </h2>
           <p className="section-desc">
-            Whether you thrive in hands-on classroom lab sessions or prefer remote interactive sessions, choose the mode that fits your schedule.
+            A comprehensive, high-accountability learning environment structured to eliminate gaps, build speed, and deliver measurable mathematical growth.
           </p>
         </div>
 
         <div className={styles.modesGrid}>
-          {/* Offline Training Card */}
+          {/* Card 1: Level-Graded Practice Material */}
           <div className={styles.modeCard}>
             <div className={styles.modeHeader}>
               <div className={styles.modeIcon} aria-hidden="true">
                 <Building size={26} strokeWidth={1.8} />
               </div>
               <div>
-                <div className={styles.modePill}>Classroom &amp; Lab</div>
-                <h3 className={styles.modeTitle}>Offline Training</h3>
+                <div className={styles.modePill}>3-Tier Practice System</div>
+                <h3 className={styles.modeTitle}>Level-Graded Practice Material</h3>
               </div>
             </div>
 
             <p className={styles.modeDesc}>
-              Learn in a classroom environment at Vidhyas IT Solutions, Suchitra, Hyderabad. Benefit from direct trainer interactions, practical lab practice, and focused study spaces.
+              Carefully scaffolded problem sets that guide students systematically from fundamental textbook fluency to non-routine national competition mastery.
             </p>
 
             <ul className={styles.modeFeatures}>
               <li className={styles.modeFeatureItem}>
                 <Check size={16} className={styles.checkIcon} aria-hidden="true" />
-                <span>Classroom instruction in Suchitra, Hyderabad</span>
+                <span>
+                  <strong>Level 1:</strong> Board &amp; Concept Fortification (NCERT / School Exam Mastery)
+                </span>
               </li>
               <li className={styles.modeFeatureItem}>
                 <Check size={16} className={styles.checkIcon} aria-hidden="true" />
-                <span>Dedicated lab facility for hands-on practice</span>
+                <span>
+                  <strong>Level 2:</strong> IIT Foundation &amp; Analytical Application (Challenging multi-step problems)
+                </span>
               </li>
               <li className={styles.modeFeatureItem}>
                 <Check size={16} className={styles.checkIcon} aria-hidden="true" />
-                <span>Immediate in-person doubt resolution</span>
+                <span>
+                  <strong>Level 3:</strong> Olympiad &amp; Challenger Tier (Non-routine, Olympiad past papers)
+                </span>
               </li>
             </ul>
 
             <div className={styles.modeActions}>
               <a
-                href={offlineWhatsAppUrl}
+                href={materialsWhatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp"
               >
                 <MessageCircle size={18} aria-hidden="true" />
-                <span>Enquire Offline Training</span>
+                <span>Enquire on WhatsApp</span>
               </a>
 
-              <Link href="#contact?mode=Offline" className="btn btn-secondary">
-                <span>Book a Campus Visit</span>
+              <Link href="#contact" className="btn btn-secondary">
+                <span>View Syllabus Details</span>
                 <ArrowRight size={16} aria-hidden="true" />
               </Link>
             </div>
           </div>
 
-          {/* Online Training Card */}
+          {/* Card 2: Diagnostics & Doubt-Clearing Clinics */}
           <div className={styles.modeCard}>
             <div className={styles.modeHeader}>
               <div className={styles.modeIcon} aria-hidden="true">
                 <Laptop size={26} strokeWidth={1.8} />
               </div>
               <div>
-                <div className={styles.modePill}>Remote &amp; Interactive</div>
-                <h3 className={styles.modeTitle}>Online Training</h3>
+                <div className={styles.modePill}>Mentorship &amp; Analytics</div>
+                <h3 className={styles.modeTitle}>Diagnostics &amp; Doubt Clinics</h3>
               </div>
             </div>
 
             <p className={styles.modeDesc}>
-              Explore online learning options from wherever you are. Access scheduled interactive sessions, structured curriculum, and trainer guidance from your home or workplace.
+              Personalized interventions to ensure no student moves forward with unresolved gaps, backed by transparent analytics reports for parents.
             </p>
 
             <ul className={styles.modeFeatures}>
               <li className={styles.modeFeatureItem}>
                 <Check size={16} className={styles.checkIcon} aria-hidden="true" />
-                <span>Attend live classes from any location</span>
+                <span>
+                  <strong>Weekly Diagnostic Quizzes:</strong> Timed topic tests to identify misconceptions early.
+                </span>
               </li>
               <li className={styles.modeFeatureItem}>
                 <Check size={16} className={styles.checkIcon} aria-hidden="true" />
-                <span>Flexible schedules suitable for working professionals</span>
+                <span>
+                  <strong>Daily Doubt-Clearing Clinics:</strong> Dedicated 1-on-1 time to ensure no student moves forward with unresolved gaps.
+                </span>
               </li>
               <li className={styles.modeFeatureItem}>
                 <Check size={16} className={styles.checkIcon} aria-hidden="true" />
-                <span>Digital assignments and guided exercises</span>
+                <span>
+                  <strong>Monthly Comprehensive Analytics Reports:</strong> Transparent progress tracking sent to parents highlighting accuracy, conceptual areas of strength, and speed metrics.
+                </span>
               </li>
             </ul>
 
             <div className={styles.modeActions}>
               <a
-                href={onlineWhatsAppUrl}
+                href={diagnosticsWhatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp"
               >
                 <MessageCircle size={18} aria-hidden="true" />
-                <span>Enquire Online Training</span>
+                <span>Enquire Doubt Clinics</span>
               </a>
 
-              <Link href="#contact?mode=Online" className="btn btn-secondary">
+              <Link href="#contact" className="btn btn-secondary">
                 <span>Enquire via Form</span>
                 <ArrowRight size={16} aria-hidden="true" />
               </Link>
