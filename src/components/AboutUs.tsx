@@ -12,8 +12,8 @@ export default function AboutUs() {
         <div className={styles.imageWrapper}>
           <div className={styles.imageCard}>
             <Image
-              src="/images/about-lab.jpg"
-              alt="Solutions to Academy - 3-Pillar Learning Framework for Mathematics Coaching"
+              src="/images/math-about-framework.jpg"
+              alt="Vidhyas IIT Academy - 3-Pillar Learning Framework for Mathematics Coaching"
               fill
               sizes="(max-width: 1024px) 100vw, 520px"
               className={styles.image}

@@ -103,7 +103,7 @@ export default function ContactSection() {
     } catch {
       // Fallback gracefully to direct WhatsApp URL if fetch fails
       const fallbackUrl = buildWhatsAppUrl(
-        `Hello Solutions to Academy,
+        `Hello Vidhyas IIT Academy,
 Name: ${formData.fullName}
 Phone: ${formData.phone}
 Class/Program: ${formData.course}
@@ -226,7 +226,7 @@ ${formData.message ? `Notes: ${formData.message}` : "Please share batch details,
                 <CheckCircle2 size={44} color="#059669" style={{ margin: "0 auto" }} />
                 <h4 className={styles.successTitle}>Enquiry Received!</h4>
                 <p className={styles.successDesc}>
-                  Thank you for contacting Solutions to Academy. We will review your enquiry and get back to you shortly.
+                  Thank you for contacting Vidhyas IIT Academy. We will review your enquiry and get back to you shortly.
                 </p>
 
                 {whatsappFallbackUrl && (

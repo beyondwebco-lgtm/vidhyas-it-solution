@@ -57,7 +57,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-whatsapp btn-lg"
-              aria-label="Enquire with Solutions to Academy on WhatsApp"
+              aria-label="Enquire with Vidhyas IIT Academy on WhatsApp"
             >
               <MessageCircle size={20} aria-hidden="true" />
               <span>Chat on WhatsApp</span>
@@ -83,8 +83,8 @@ export default function Hero() {
         <div className={styles.visualWrapper}>
           <div className={styles.imageCard}>
             <Image
-              src="/images/hero-training.jpg"
-              alt="Solutions to Academy Mathematics Coaching for Classes 5th to 10th in Suchitra, Hyderabad"
+              src="/images/math-hero-classroom.jpg"
+              alt="Vidhyas IIT Academy Mathematics Coaching for Classes 5th to 10th in Suchitra, Hyderabad"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 540px"

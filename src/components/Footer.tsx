@@ -27,7 +27,7 @@ export default function Footer({ currentYear = 2026 }: FooterProps) {
                   <GraduationCap size={20} />
                 </div>
                 <span className={styles.brandName}>
-                  Solutions to <span className={styles.brandAccent}>Academy</span>
+                  Vidhyas <span className={styles.brandAccent}>IIT</span> Academy
                 </span>
               </div>
               <p className={styles.brandDesc}>

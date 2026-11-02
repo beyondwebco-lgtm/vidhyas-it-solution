@@ -20,13 +20,13 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.baseUrl),
   title: {
-    default: "Solutions to Academy | Premier Mathematics Coaching for Classes 5th to 10th",
-    template: "%s | Solutions to Academy",
+    default: "Vidhyas IIT Academy | Premier Mathematics Coaching for Classes 5th to 10th",
+    template: "%s | Vidhyas IIT Academy",
   },
   description:
-    "Transform Mathematical Fear into Mastery: Build a Bulletproof IIT-JEE & Olympiad Foundation Early. Concept-first mathematics training for Classes 5 to 10 by Solutions to Academy.",
+    "Transform Mathematical Fear into Mastery: Build a Bulletproof IIT-JEE & Olympiad Foundation Early. Concept-first mathematics training for Classes 5 to 10 by Vidhyas IIT Academy.",
   keywords: [
-    "Solutions to Academy",
+    "Vidhyas IIT Academy",
     "Mathematics coaching for classes 5 to 10",
     "IIT JEE Foundation coaching Suchitra Hyderabad",
     "IOQM preparation Hyderabad",
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     "Concept-first maths coaching",
     "Small batch math mentorship Suchitra",
   ],
-  authors: [{ name: "Solutions to Academy" }],
-  creator: "Solutions to Academy",
-  publisher: "Solutions to Academy",
+  authors: [{ name: "Vidhyas IIT Academy" }],
+  creator: "Vidhyas IIT Academy",
+  publisher: "Vidhyas IIT Academy",
   formatDetection: {
     email: false,
     address: true,
@@ -52,25 +52,25 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: siteConfig.baseUrl,
-    siteName: "Solutions to Academy",
-    title: "Solutions to Academy | Premier Mathematics Coaching for Classes 5th to 10th",
+    siteName: "Vidhyas IIT Academy",
+    title: "Vidhyas IIT Academy | Premier Mathematics Coaching for Classes 5th to 10th",
     description:
       "Transform Mathematical Fear into Mastery: Build a Bulletproof IIT-JEE & Olympiad Foundation Early. Concept-first coaching for Classes 5 to 10.",
     images: [
       {
-        url: "/images/hero-training.jpg",
+        url: "/images/math-hero-classroom.jpg",
         width: 1200,
         height: 675,
-        alt: "Solutions to Academy Mathematics Coaching for Classes 5th to 10th",
+        alt: "Vidhyas IIT Academy Mathematics Coaching for Classes 5th to 10th",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Solutions to Academy | Mathematics Coaching (Classes 5th - 10th)",
+    title: "Vidhyas IIT Academy | Mathematics Coaching (Classes 5th - 10th)",
     description:
       "Transform Mathematical Fear into Mastery: Build a Bulletproof IIT-JEE & Olympiad Foundation Early.",
-    images: ["/images/hero-training.jpg"],
+    images: ["/images/math-hero-classroom.jpg"],
   },
   icons: {
     icon: [
@@ -137,7 +137,7 @@ export default function RootLayout({
         "@id": `${siteConfig.baseUrl}/#localbusiness`,
         name: siteConfig.name,
         url: siteConfig.baseUrl,
-        image: `${siteConfig.baseUrl}/images/hero-training.jpg`,
+        image: `${siteConfig.baseUrl}/images/math-hero-classroom.jpg`,
         telephone: siteConfig.phones.map((p) => `+91-${p}`),
         address: {
           "@type": "PostalAddress",
