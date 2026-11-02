@@ -13,7 +13,7 @@ export default function AboutUs() {
           <div className={styles.imageCard}>
             <Image
               src="/images/about-lab.jpg"
-              alt="Jeet Kumar Raja - 3-Pillar Learning Framework for Mathematics Coaching"
+              alt="Vidhyas IIT Solution - 3-Pillar Learning Framework for Mathematics Coaching"
               fill
               sizes="(max-width: 1024px) 100vw, 520px"
               className={styles.image}

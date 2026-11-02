@@ -20,12 +20,13 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.baseUrl),
   title: {
-    default: "Jeet Kumar Raja | Premier Mathematics Coaching for Classes 5th to 10th",
-    template: "%s | Jeet Kumar Raja - Mathematics Coaching",
+    default: "Vidhyas IIT Solution | Premier Mathematics Coaching for Classes 5th to 10th",
+    template: "%s | Vidhyas IIT Solution",
   },
   description:
-    "Transform Mathematical Fear into Mastery: Build a Bulletproof IIT-JEE & Olympiad Foundation Early. Concept-first mathematics training for Classes 5 to 10 by Jeet Kumar Raja.",
+    "Transform Mathematical Fear into Mastery: Build a Bulletproof IIT-JEE & Olympiad Foundation Early. Concept-first mathematics training for Classes 5 to 10 by Vidhyas IIT Solution.",
   keywords: [
+    "Vidhyas IIT Solution",
     "Mathematics coaching for classes 5 to 10",
     "IIT JEE Foundation coaching Suchitra Hyderabad",
     "IOQM preparation Hyderabad",
@@ -33,13 +34,12 @@ export const metadata: Metadata = {
     "Olympiad math classes for Class 5 to 10",
     "Class 5 sub-junior foundation math",
     "Class 10 JEE bridge course",
-    "Jeet Kumar Raja mathematics",
     "Concept-first maths coaching",
     "Small batch math mentorship Suchitra",
   ],
-  authors: [{ name: "Jeet Kumar Raja" }],
-  creator: "Jeet Kumar Raja",
-  publisher: "Jeet Kumar Raja",
+  authors: [{ name: "Vidhyas IIT Solution" }],
+  creator: "Vidhyas IIT Solution",
+  publisher: "Vidhyas IIT Solution",
   formatDetection: {
     email: false,
     address: true,
@@ -52,8 +52,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: siteConfig.baseUrl,
-    siteName: "Jeet Kumar Raja - Mathematics Coaching",
-    title: "Jeet Kumar Raja | Premier Mathematics Coaching for Classes 5th to 10th",
+    siteName: "Vidhyas IIT Solution",
+    title: "Vidhyas IIT Solution | Premier Mathematics Coaching for Classes 5th to 10th",
     description:
       "Transform Mathematical Fear into Mastery: Build a Bulletproof IIT-JEE & Olympiad Foundation Early. Concept-first coaching for Classes 5 to 10.",
     images: [
@@ -61,13 +61,13 @@ export const metadata: Metadata = {
         url: "/images/hero-training.jpg",
         width: 1200,
         height: 675,
-        alt: "Jeet Kumar Raja Mathematics Coaching for Classes 5th to 10th",
+        alt: "Vidhyas IIT Solution Mathematics Coaching for Classes 5th to 10th",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jeet Kumar Raja | Mathematics Coaching (Classes 5th - 10th)",
+    title: "Vidhyas IIT Solution | Mathematics Coaching (Classes 5th - 10th)",
     description:
       "Transform Mathematical Fear into Mastery: Build a Bulletproof IIT-JEE & Olympiad Foundation Early.",
     images: ["/images/hero-training.jpg"],

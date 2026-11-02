@@ -27,7 +27,7 @@ export default function CoursesSection() {
       : currentCategoryObj?.courses || [];
 
   const diagnosticWhatsAppUrl = buildWhatsAppUrl(
-    "Hello Jeet Sir, I would like to schedule a conceptual diagnostic evaluation test for my child."
+    "Hello Vidhyas IIT Solution, I would like to schedule a conceptual diagnostic evaluation test for my child."
   );
 
   return (

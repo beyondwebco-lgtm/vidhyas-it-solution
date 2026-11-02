@@ -57,13 +57,13 @@ export default function Navbar() {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={`container ${styles.navContainer}`}>
         {/* Brand Treatment */}
-        <Link href="#top" className={styles.brand} aria-label="Jeet Kumar Raja - Mathematics Coaching">
+        <Link href="#top" className={styles.brand} aria-label="Vidhyas IIT Solution - Mathematics Coaching">
           <div className={styles.brandIcon} aria-hidden="true">
             <GraduationCap size={22} />
           </div>
           <div className={styles.brandText}>
             <span className={styles.brandName}>
-              Jeet Kumar <span className={styles.brandAccent}>Raja</span>
+              Vidhyas <span className={styles.brandAccent}>IIT</span> Solution
             </span>
             <span className={styles.brandSub}>Mathematics Coaching • Suchitra</span>
           </div>
