@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import {
   MapPin,
   Phone,
@@ -147,8 +148,19 @@ ${formData.message ? `Notes: ${formData.message}` : "Please share batch details,
           {/* Left: Business Info Card */}
           <div className={styles.infoColumn}>
             <div className={styles.infoCard}>
-              <span className={styles.infoEyebrow}>Premier Mathematics Coaching</span>
-              <h3 className={styles.instituteName}>{siteConfig.name}</h3>
+              <div style={{ display: "flex", alignItems: "center", gap: "14px", marginBottom: "14px" }}>
+                <Image
+                  src="/images/logo-circle.png"
+                  alt="Vidhyas IIT Academy Official Logo"
+                  width={44}
+                  height={44}
+                  style={{ objectFit: "contain", flexShrink: 0 }}
+                />
+                <div>
+                  <span className={styles.infoEyebrow}>Premier Mathematics Coaching</span>
+                  <h3 className={styles.instituteName} style={{ margin: 0 }}>{siteConfig.name}</h3>
+                </div>
+              </div>
               <p className={styles.infoIntro}>
                 Transform Mathematical Fear into Mastery: Build a Bulletproof IIT-JEE &amp; Olympiad Foundation Early for Classes 5th to 10th.
               </p>

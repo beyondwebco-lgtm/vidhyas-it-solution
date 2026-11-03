@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { GraduationCap, MapPin, Phone, MessageCircle } from "lucide-react";
+import Image from "next/image";
+import { MapPin, Phone, MessageCircle } from "lucide-react";
 import { siteConfig, getDefaultWhatsAppUrl } from "@/data/siteConfig";
 import { COURSE_CATEGORIES } from "@/data/courses";
 import PrivacyModal from "./PrivacyModal";
@@ -23,12 +24,23 @@ export default function Footer({ currentYear = 2026 }: FooterProps) {
             {/* Column 1: Brand Info */}
             <div className={styles.brandCol}>
               <div className={styles.brand}>
-                <div className={styles.brandIcon} aria-hidden="true">
-                  <GraduationCap size={20} />
+                <div className={styles.brandLogoWrap}>
+                  <Image
+                    src="/images/logo-circle.png"
+                    alt="Vidhyas IIT Academy Official Logo"
+                    width={46}
+                    height={46}
+                    className={styles.brandLogoImg}
+                  />
                 </div>
-                <span className={styles.brandName}>
-                  Vidhyas <span className={styles.brandAccent}>IIT</span> Academy
-                </span>
+                <div className={styles.brandText}>
+                  <span className={styles.brandName}>
+                    Vidhyas <span className={styles.brandAccent}>IIT</span> Academy
+                  </span>
+                  <span className={styles.brandTagline}>
+                    Transform Mathematical Fear into Mastery
+                  </span>
+                </div>
               </div>
               <p className={styles.brandDesc}>
                 {siteConfig.intro} Providing concept-first mathematics coaching and IIT-JEE foundation in Suchitra, Hyderabad.

@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Phone, Menu, X, ArrowUpRight, GraduationCap } from "lucide-react";
+import Image from "next/image";
+import { Phone, Menu, X, ArrowUpRight } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
 import styles from "./Navbar.module.css";
 
@@ -57,15 +58,22 @@ export default function Navbar() {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={`container ${styles.navContainer}`}>
         {/* Brand Treatment */}
-        <Link href="#top" className={styles.brand} aria-label="Vidhyas IIT Academy - Mathematics Coaching">
-          <div className={styles.brandIcon} aria-hidden="true">
-            <GraduationCap size={22} />
+        <Link href="#top" className={styles.brand} aria-label="Vidhyas IIT Academy - Transform Mathematical Fear into Mastery">
+          <div className={styles.brandLogoWrap}>
+            <Image
+              src="/images/logo-circle.png"
+              alt="Vidhyas IIT Academy Official Logo"
+              width={46}
+              height={46}
+              priority
+              className={styles.brandLogoImg}
+            />
           </div>
           <div className={styles.brandText}>
             <span className={styles.brandName}>
               Vidhyas <span className={styles.brandAccent}>IIT</span> Academy
             </span>
-            <span className={styles.brandSub}>Mathematics Coaching • Suchitra</span>
+            <span className={styles.brandSub}>Transform Mathematical Fear into Mastery</span>
           </div>
         </Link>
 
@@ -120,6 +128,24 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       <div className={`${styles.mobileMenu} ${mobileMenuOpen ? styles.open : ""}`}>
+        <div className={styles.mobileDrawerBrand}>
+          <Image
+            src="/images/logo-circle.png"
+            alt="Vidhyas IIT Academy Official Logo"
+            width={42}
+            height={42}
+            className={styles.brandLogoImg}
+          />
+          <div className={styles.brandText}>
+            <span className={styles.brandName} style={{ fontSize: "1.1rem" }}>
+              Vidhyas <span className={styles.brandAccent}>IIT</span> Academy
+            </span>
+            <span className={styles.brandSub} style={{ whiteSpace: "normal", fontSize: "0.6rem" }}>
+              Transform Mathematical Fear into Mastery
+            </span>
+          </div>
+        </div>
+
         <ul className={styles.mobileNavList}>
           {NAV_ITEMS.map((item) => (
             <li key={item.href}>

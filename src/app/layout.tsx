@@ -74,11 +74,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      { url: "/icon.png", type: "image/png" },
       { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/icon.svg", type: "image/svg+xml" },
     ],
-    shortcut: "/favicon.svg",
-    apple: "/icon.svg",
+    shortcut: "/icon.png",
+    apple: "/icon-192.png",
   },
   robots: {
     index: true,
@@ -107,7 +108,7 @@ export default function RootLayout({
         "@id": `${siteConfig.baseUrl}/#organization`,
         name: siteConfig.name,
         url: siteConfig.baseUrl,
-        logo: `${siteConfig.baseUrl}/icon.svg`,
+        logo: `${siteConfig.baseUrl}/images/logo-circle.png`,
         description: siteConfig.intro,
         telephone: siteConfig.phones.map((p) => `+91-${p}`),
         address: {
