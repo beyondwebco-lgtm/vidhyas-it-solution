@@ -63,7 +63,7 @@ export default function PrivacyModal({ isOpen, onClose }: PrivacyModalProps) {
 
           <h4>How We Use Your Information</h4>
           <p>
-            We use this information strictly to provide you with requested details regarding mathematics curriculum, diagnostic evaluations, batch schedules, fee structures, and enrollment counseling. We do not sell, rent, or trade your personal information to third parties.
+            We use this information strictly to provide you with requested details regarding mathematics, physics, and chemistry curriculum, diagnostic evaluations, batch schedules, fee structures, and enrollment counseling. We do not sell, rent, or trade your personal information to third parties.
           </p>
 
           <h4>Communication Preferences</h4>

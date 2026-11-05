@@ -11,25 +11,25 @@ const ADVANTAGES = [
   {
     title: "Deconstruct Rote Learning",
     description:
-      "Traditional schooling rewards pattern-matching and mechanical calculation. We teach students why a theorem works before showing how to apply it.",
+      "Traditional schooling rewards pattern-matching and mechanical calculation. We teach students why a mathematical theorem or scientific law works before showing how to apply it.",
     icon: BrainCircuit,
   },
   {
     title: "Cultivate Algorithmic & Logical Thinking",
     description:
-      "Mathematics is the gym for analytical thinking. Early mastery builds structural reasoning applicable to Physics, Computer Science, and competitive exams.",
+      "Mathematics and foundational science are the gym for analytical thinking. Early mastery builds structural reasoning across Mathematics, Physics, and Chemistry.",
     icon: Cpu,
   },
   {
-    title: "Eliminate Future JEE Shock",
+    title: "Build Early Conceptual Stamina",
     description:
-      "JEE Advanced tests non-routine synthesis across multiple topics. Starting in Class 5–8 builds mental stamina without high-stakes academic pressure.",
+      "Competitive examinations and higher academics test multi-concept synthesis. Starting early in Classes 5–10 builds mental stamina and confidence without academic pressure.",
     icon: TrendingUp,
   },
   {
     title: "Excellence in National & Global Olympiads",
     description:
-      "Direct preparation for prestigious contests including IOQM (Indian Olympiad Qualifier in Mathematics), NMTC (National Mathematics Talent Contests), AMC 8/10, and Aryabhata Competitions.",
+      "Direct preparation for prestigious science and mathematics contests including IOQM, NMTC, Science Olympiads (NSO), and National Talent Competitions.",
     icon: Award,
   },
 ];
@@ -39,12 +39,12 @@ export default function WhyChooseUs() {
     <section id="why-us" className={`section-padding ${styles.whyUsSection}`} aria-labelledby="why-us-heading">
       <div className="container">
         <div className="section-header">
-          <span className="section-eyebrow">The IIT Foundation Advantage</span>
+          <span className="section-eyebrow">The Foundation Advantage</span>
           <h2 id="why-us-heading" className="section-title">
-            Why Start Early? The IIT Foundation Advantage
+            Why Start Early? The Foundation Advantage
           </h2>
           <p className="section-desc">
-            Most students struggle in Class 11 and 12 not because of the syllabus volume, but because their foundational mathematical intuition was never developed in middle school.
+            Most students struggle in higher classes not because of syllabus volume, but because their foundational concepts in Mathematics and Science were never developed early in middle school.
           </p>
         </div>
 

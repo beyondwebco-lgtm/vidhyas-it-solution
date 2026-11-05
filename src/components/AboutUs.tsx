@@ -1,8 +1,60 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight, Check, MapPin, Sparkles } from "lucide-react";
+import { Check, Sparkles } from "lucide-react";
 import styles from "./AboutUs.module.css";
+
+const ROOT_2_RANK_STEPS = [
+  {
+    step: "1. Diagnostic",
+    title: "Diagnostic",
+    desc: "Identify existing learning gaps and misconceptions in prerequisite concepts before starting new topics.",
+  },
+  {
+    step: "2. Foundation",
+    title: "Foundation",
+    desc: "Strengthen prerequisite fundamentals and essential tools to ensure strong readiness.",
+  },
+  {
+    step: "3. Concept",
+    title: "Concept",
+    desc: "Teach current class topics from core first principles with clear visual and logical explanations.",
+  },
+  {
+    step: "4. Examples",
+    title: "Examples",
+    desc: "Explain concepts through guided, step-by-step model examples demonstrating underlying logic.",
+  },
+  {
+    step: "5. Practice",
+    title: "Practice",
+    desc: "Scaffold learning with basic, intermediate, and advanced questions to build solid fluency.",
+  },
+  {
+    step: "6. Application",
+    title: "Application",
+    desc: "Connect mathematical and scientific concepts with real-life situations and physical phenomena.",
+  },
+  {
+    step: "7. Challenge",
+    title: "Challenge",
+    desc: "Develop non-routine problem-solving skills and higher-order analytical reasoning.",
+  },
+  {
+    step: "8. Revision",
+    title: "Revision",
+    desc: "Reinforce important concepts, scientific laws, derivations, and formulas systematically.",
+  },
+  {
+    step: "9. Assessment",
+    title: "Assessment",
+    desc: "Conduct periodic topic and chapter tests to measure accuracy, conceptual retention, and speed.",
+  },
+  {
+    step: "10. Feedback",
+    title: "Feedback",
+    desc: "Identify weak areas, analyze error patterns, and provide targeted doubt resolution to improve learning.",
+  },
+];
 
 export default function AboutUs() {
   return (
@@ -13,14 +65,14 @@ export default function AboutUs() {
           <div className={styles.imageCard}>
             <Image
               src="/images/math-about-framework.jpg"
-              alt="Vidhyas IIT Academy - 3-Pillar Learning Framework for Mathematics Coaching"
+              alt="Vidhyas IIT Academy - Root2Rank Learning Methodology for Classes 5 to 10"
               fill
               sizes="(max-width: 1024px) 100vw, 520px"
               className={styles.image}
             />
             <div className={styles.imageFloatingPill}>
               <Sparkles size={14} color="#0284c7" />
-              <span>3-Pillar Learning Framework</span>
+              <span>Root2Rank Methodology</span>
             </div>
           </div>
         </div>
@@ -30,52 +82,24 @@ export default function AboutUs() {
           <span className="section-eyebrow">Teaching Methodology</span>
           
           <h2 id="about-heading" className={styles.aboutTitle}>
-            Our 3-Pillar Learning Framework
+            Our Root2Rank Learning Methodology
           </h2>
 
           <p className={styles.aboutText}>
-            Our classroom methodology dismantles rote memorization and rebuilds concepts visually and logically. We train students from Class 5 to 10 to develop deep problem synthesis and sustained analytical stamina for Olympiads and JEE Advanced.
+            Our structured Root2Rank classroom methodology dismantles rote memorization and rebuilds concepts visually and logically. We train students from Class 5 to 10 to develop deep conceptual clarity, sustained analytical stamina, and multi-concept problem synthesis across Mathematics, Physics, and Chemistry.
           </p>
 
           <div className={styles.featuresList}>
-            <div className={styles.featureRow}>
-              <span className={styles.featureDot} aria-hidden="true">
-                <Check size={13} strokeWidth={3} />
-              </span>
-              <span>
-                <strong>1. Conceptual Grounding (Concrete to Abstract):</strong> Every formula is derived from first principles. Students understand geometric representations of algebraic identities and visual proofs of theorems.
-              </span>
-            </div>
-
-            <div className={styles.featureRow}>
-              <span className={styles.featureDot} aria-hidden="true">
-                <Check size={13} strokeWidth={3} />
-              </span>
-              <span>
-                <strong>2. Mental Agility &amp; Vedic Precision:</strong> Integrating rapid arithmetic techniques, mental algebra, and number sense to reduce calculation errors and increase execution speed.
-              </span>
-            </div>
-
-            <div className={styles.featureRow}>
-              <span className={styles.featureDot} aria-hidden="true">
-                <Check size={13} strokeWidth={3} />
-              </span>
-              <span>
-                <strong>3. Challenger-Level Problem Solving:</strong> Exposure to multi-concept, non-routine problems that force students to synthesize ideas across geometry, algebra, and number theory.
-              </span>
-            </div>
-          </div>
-
-          <div className={styles.actionRow}>
-            <Link href="#courses" className="btn btn-primary">
-              <span>Explore Curriculum</span>
-              <ArrowRight size={16} aria-hidden="true" />
-            </Link>
-
-            <Link href="#contact" className="btn btn-secondary">
-              <MapPin size={16} aria-hidden="true" />
-              <span>Schedule Assessment</span>
-            </Link>
+            {ROOT_2_RANK_STEPS.map((item) => (
+              <div key={item.title} className={styles.featureRow}>
+                <span className={styles.featureDot} aria-hidden="true">
+                  <Check size={13} strokeWidth={3} />
+                </span>
+                <span>
+                  <strong>{item.step}:</strong> {item.desc}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

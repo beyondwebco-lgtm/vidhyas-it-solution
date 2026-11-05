@@ -1,18 +1,8 @@
 import React from "react";
-import Link from "next/link";
-import { Building, Laptop, MessageCircle, Check, ArrowRight } from "lucide-react";
-import { buildWhatsAppUrl } from "@/data/siteConfig";
+import { Building, Laptop, Check } from "lucide-react";
 import styles from "./LearningModes.module.css";
 
 export default function LearningModes() {
-  const materialsWhatsAppUrl = buildWhatsAppUrl(
-    "Hello Vidhyas IIT Academy, I would like to enquire about the 3-Tier Graded Practice Material and Curriculum for my child."
-  );
-
-  const diagnosticsWhatsAppUrl = buildWhatsAppUrl(
-    "Hello Vidhyas IIT Academy, I would like to know more about the Weekly Diagnostic Quizzes and Daily Doubt-Clearing Clinics."
-  );
-
   return (
     <section id="learning-modes" className={`section-padding ${styles.modesSection}`} aria-labelledby="modes-heading">
       <div className="container">
@@ -22,7 +12,7 @@ export default function LearningModes() {
             Classroom Ecosystem &amp; Deliverables
           </h2>
           <p className="section-desc">
-            A comprehensive, high-accountability learning environment structured to eliminate gaps, build speed, and deliver measurable mathematical growth.
+            A comprehensive, high-accountability learning environment structured to eliminate gaps, build speed, and deliver measurable growth across Mathematics, Physics, and Chemistry for Classes 5 to 10.
           </p>
         </div>
 
@@ -53,7 +43,7 @@ export default function LearningModes() {
               <li className={styles.modeFeatureItem}>
                 <Check size={16} className={styles.checkIcon} aria-hidden="true" />
                 <span>
-                  <strong>Level 2:</strong> IIT Foundation &amp; Analytical Application (Challenging multi-step problems)
+                  <strong>Level 2:</strong> Foundation &amp; Analytical Application (Challenging multi-step problems)
                 </span>
               </li>
               <li className={styles.modeFeatureItem}>
@@ -63,23 +53,6 @@ export default function LearningModes() {
                 </span>
               </li>
             </ul>
-
-            <div className={styles.modeActions}>
-              <a
-                href={materialsWhatsAppUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-whatsapp"
-              >
-                <MessageCircle size={18} aria-hidden="true" />
-                <span>Enquire on WhatsApp</span>
-              </a>
-
-              <Link href="#contact" className="btn btn-secondary">
-                <span>View Syllabus Details</span>
-                <ArrowRight size={16} aria-hidden="true" />
-              </Link>
-            </div>
           </div>
 
           {/* Card 2: Diagnostics & Doubt-Clearing Clinics */}
@@ -102,39 +75,22 @@ export default function LearningModes() {
               <li className={styles.modeFeatureItem}>
                 <Check size={16} className={styles.checkIcon} aria-hidden="true" />
                 <span>
-                  <strong>Weekly Diagnostic Quizzes:</strong> Timed topic tests to identify misconceptions early.
+                  <strong>Weekly Diagnostic Quizzes:</strong> Instant identification of topic-wise misconceptions.
                 </span>
               </li>
               <li className={styles.modeFeatureItem}>
                 <Check size={16} className={styles.checkIcon} aria-hidden="true" />
                 <span>
-                  <strong>Daily Doubt-Clearing Clinics:</strong> Dedicated 1-on-1 time to ensure no student moves forward with unresolved gaps.
+                  <strong>Daily Doubt-Clearing Clinics:</strong> 1-on-1 faculty access after every class session.
                 </span>
               </li>
               <li className={styles.modeFeatureItem}>
                 <Check size={16} className={styles.checkIcon} aria-hidden="true" />
                 <span>
-                  <strong>Monthly Comprehensive Analytics Reports:</strong> Transparent progress tracking sent to parents highlighting accuracy, conceptual areas of strength, and speed metrics.
+                  <strong>Monthly Progress Portfolios:</strong> Detailed granular metrics shared directly with parents.
                 </span>
               </li>
             </ul>
-
-            <div className={styles.modeActions}>
-              <a
-                href={diagnosticsWhatsAppUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-whatsapp"
-              >
-                <MessageCircle size={18} aria-hidden="true" />
-                <span>Enquire Doubt Clinics</span>
-              </a>
-
-              <Link href="#contact" className="btn btn-secondary">
-                <span>Enquire via Form</span>
-                <ArrowRight size={16} aria-hidden="true" />
-              </Link>
-            </div>
           </div>
         </div>
       </div>

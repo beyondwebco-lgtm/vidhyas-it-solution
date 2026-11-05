@@ -22,7 +22,7 @@ export default function FaqSection() {
             Frequently Asked Questions (FAQ for Parents)
           </h2>
           <p className="section-desc">
-            Clear answers for parents on managing school curriculum alongside foundation classes, building conceptual confidence, and preparing for IIT-JEE and Olympiads early.
+            Clear answers for parents on managing school curriculum alongside foundation classes, building conceptual confidence in Mathematics, Physics, and Chemistry for Classes 5 to 10.
           </p>
         </div>
 

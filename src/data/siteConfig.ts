@@ -21,8 +21,8 @@ export interface BusinessConfig {
 export const siteConfig: BusinessConfig = {
   name: "Vidhyas IIT Academy",
   tagline: "Transform Mathematical Fear into Mastery",
-  supportingHeadline: "Build a Bulletproof IIT-JEE & Olympiad Foundation Early for Classes 5th to 10th.",
-  intro: "We don't teach shortcuts or memorization. We train young minds in Class 5 to 10 to think critically, derive from first principles, and conquer complex mathematical challenges with speed and confidence.",
+  supportingHeadline: "Build a Strong Foundation Early in Mathematics, Physics & Chemistry for Classes 5 to 10.",
+  intro: "We don't teach shortcuts or memorization. We train young minds in Class 5 to 10 to think critically, derive from first principles, and conquer complex challenges in Mathematics, Physics, and Chemistry with speed and confidence.",
   location: {
     area: "Suchitra",
     city: "Hyderabad",
@@ -36,9 +36,9 @@ export const siteConfig: BusinessConfig = {
   secondaryPhone: "7337555268",
   baseUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://vidhyasitsolutions.com",
   trustPoints: [
-    "100% Concept-First Approach: Rigorous proofs & deep intuition",
+    "100% Concept-First Approach: Rigorous understanding & deep intuition",
     "3-Tier Graded Problem Sets: School mastery to Olympiads",
-    "Class 5 to 10 Continuous Pathway: Transition into JEE Advanced",
+    "Classes 5 to 10 Continuous Pathway: Mathematics, Physics & Chemistry",
     "Small Batch Mentorship: Dedicated doubt-resolution clinics",
   ],
 };
@@ -55,7 +55,9 @@ export function buildWhatsAppUrl(message: string): string {
 }
 
 export function getDefaultWhatsAppUrl(): string {
-  return buildWhatsAppUrl("Hello Vidhyas IIT Academy, I would like to know more about your Mathematics coaching for Classes 5th to 10th.");
+  return buildWhatsAppUrl(
+    "Hello Vidhyas IIT Academy, I would like to know more about your Mathematics, Physics, and Chemistry coaching for Classes 5 to 10."
+  );
 }
 
 export function getCourseWhatsAppUrl(courseName: string, mode?: string): string {

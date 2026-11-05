@@ -10,7 +10,7 @@ export default function FloatingWidgets() {
 
   return (
     <>
-      {/* Floating WhatsApp Button */}
+      {/* Location 2: Single Floating WhatsApp Button */}
       <a
         href={whatsappUrl}
         target="_blank"

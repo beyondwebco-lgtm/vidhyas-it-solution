@@ -4,7 +4,9 @@ import { buildWhatsAppUrl } from "@/data/siteConfig";
 interface EnquiryPayload {
   fullName: string;
   phone: string;
-  course: string;
+  studentClass?: string;
+  subject?: string;
+  course?: string;
   mode: string;
   message?: string;
   honeypot?: string;
@@ -36,10 +38,13 @@ export async function POST(request: Request) {
       errors.phone = "Please enter a valid 10-digit mobile number.";
     }
 
-    // 4. Validate Course
-    if (!body.course || body.course.trim().length < 2) {
-      errors.course = "Please select or enter the course you are interested in.";
+    // 4. Validate Class & Subject (or fallback course)
+    const studentClass = (body.studentClass || body.course || "").trim();
+    if (!studentClass || studentClass.length < 2) {
+      errors.studentClass = "Please select an academic class (Class 5 to 10).";
     }
+
+    const subject = (body.subject || "Mathematics, Physics & Chemistry").trim();
 
     // 5. Validate Preferred Mode
     const validModes = ["Online", "Offline", "Not Sure"];
@@ -55,7 +60,8 @@ export async function POST(request: Request) {
     const sanitizedData = {
       fullName: body.fullName.trim().slice(0, 100),
       phone: cleanPhone.slice(-10),
-      course: body.course.trim().slice(0, 100),
+      studentClass: studentClass.slice(0, 100),
+      subject: subject.slice(0, 100),
       mode,
       message: (body.message || "").trim().slice(0, 500),
       receivedAt: new Date().toISOString(),
@@ -63,20 +69,20 @@ export async function POST(request: Request) {
 
     // Construct tailored WhatsApp link for direct confirmation
     const waText = `Hello Vidhyas IIT Academy,
-My Name: ${sanitizedData.fullName}
+Name: ${sanitizedData.fullName}
 Phone: ${sanitizedData.phone}
-Class/Program: ${sanitizedData.course}
+Class: ${sanitizedData.studentClass}
+Subject: ${sanitizedData.subject}
 Preferred Mode: ${sanitizedData.mode}
 ${sanitizedData.message ? `Notes: ${sanitizedData.message}` : "Please provide fee details, diagnostic test scheduling, and next batch schedule."}`;
 
     const whatsappRedirectUrl = buildWhatsAppUrl(waText);
 
-    // In a production environment with email/CRM services, the sanitizedData would be dispatched securely here.
-    // For local resilience and privacy, we log safely without sensitive leak:
     console.log("[Enquiry Received]:", {
       name: sanitizedData.fullName,
       phone: `***${sanitizedData.phone.slice(-4)}`,
-      course: sanitizedData.course,
+      class: sanitizedData.studentClass,
+      subject: sanitizedData.subject,
       mode: sanitizedData.mode,
       timestamp: sanitizedData.receivedAt,
     });

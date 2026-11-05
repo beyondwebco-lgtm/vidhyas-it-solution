@@ -11,15 +11,15 @@ export default function Hero() {
   const trustStats = [
     {
       title: "100% Concept-First Approach",
-      detail: "Rigorous proofs and deep intuition over rote formula cramming.",
+      detail: "Rigorous proofs, laws, and deep intuition over rote formula cramming.",
     },
     {
       title: "3-Tier Graded Problem Sets",
       detail: "From school syllabus mastery to Olympiad-level non-routine problems.",
     },
     {
-      title: "Class 5 to 10 Continuous Pathway",
-      detail: "Seamless transition into Class 11–12 JEE Advanced preparation.",
+      title: "Classes 5 to 10 Continuous Pathway",
+      detail: "Seamless conceptual progression across Mathematics, Physics, and Chemistry.",
     },
     {
       title: "Small Batch Mentorship",
@@ -34,12 +34,12 @@ export default function Hero() {
         <div className={styles.heroContent}>
           <div className={styles.eyebrow}>
             <span className={styles.eyebrowDot} aria-hidden="true" />
-            <span>Premier Mathematics Coaching for Classes 5th to 10th</span>
+            <span>Mathematics, Physics &amp; Chemistry Coaching for Classes 5 to 10</span>
           </div>
 
           <h1 id="hero-heading" className={styles.headline}>
             Transform Mathematical Fear into Mastery: <br />
-            <span className={styles.highlight}>Build a Bulletproof IIT-JEE &amp; Olympiad Foundation Early.</span>
+            <span className={styles.highlight}>Build a Bulletproof Foundation in Maths, Physics &amp; Chemistry for Classes 5–10.</span>
           </h1>
 
           <p className={styles.subheadline}>
@@ -84,7 +84,7 @@ export default function Hero() {
           <div className={styles.imageCard}>
             <Image
               src="/images/math-hero-classroom.jpg"
-              alt="Vidhyas IIT Academy Mathematics Coaching for Classes 5th to 10th in Suchitra, Hyderabad"
+              alt="Vidhyas IIT Academy Coaching for Classes 5 to 10 in Suchitra, Hyderabad"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 540px"
@@ -93,7 +93,7 @@ export default function Hero() {
             <div className={styles.locationBadge}>
               <MapPin size={20} className={styles.locIcon} aria-hidden="true" />
               <div>
-                <div className={styles.locLabel}>Mathematics Coaching</div>
+                <div className={styles.locLabel}>Classes 5 to 10 Coaching</div>
                 <div className={styles.locValue}>Suchitra, Hyderabad</div>
               </div>
             </div>

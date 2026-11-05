@@ -1,7 +1,5 @@
 import React from "react";
-import { MessageCircle } from "lucide-react";
 import { CourseItem } from "@/data/courses";
-import { getCourseWhatsAppUrl } from "@/data/siteConfig";
 import DynamicIcon from "./DynamicIcon";
 import styles from "./CoursesSection.module.css";
 
@@ -11,11 +9,9 @@ interface CourseCardProps {
 
 /**
  * Shared, reusable course card component.
- * Displays course information with a single direct WhatsApp enquiry button.
+ * Displays course information with academic foundation details.
  */
 export default function CourseCard({ course }: CourseCardProps) {
-  const whatsappUrl = getCourseWhatsAppUrl(`${course.name} (${course.category})`);
-
   return (
     <article className={styles.courseCard}>
       <div className={styles.cardHeader}>
@@ -30,23 +26,10 @@ export default function CourseCard({ course }: CourseCardProps) {
 
       {course.olympiadEdge && (
         <div className={styles.scheduleNote}>
-          <span style={{ fontWeight: 600, color: "#0A192F" }}>Olympiad Edge: </span>
+          <span style={{ fontWeight: 600, color: "#0A192F" }}>Academic Edge: </span>
           <span>{course.olympiadEdge}</span>
         </div>
       )}
-
-      <div className={styles.cardActions}>
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.quickWaBtn}
-          aria-label={`Enquire about ${course.name} on WhatsApp`}
-        >
-          <MessageCircle size={16} aria-hidden="true" />
-          <span>Enquire on WhatsApp</span>
-        </a>
-      </div>
     </article>
   );
 }

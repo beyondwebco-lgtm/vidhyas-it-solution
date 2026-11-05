@@ -12,14 +12,14 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { siteConfig, getDefaultWhatsAppUrl, buildWhatsAppUrl } from "@/data/siteConfig";
-import { ALL_COURSES } from "@/data/courses";
 import styles from "./ContactSection.module.css";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
     fullName: "",
     phone: "",
-    course: "",
+    studentClass: "",
+    subject: "",
     mode: "Not Sure",
     message: "",
     honeypot: "",
@@ -30,18 +30,22 @@ export default function ContactSection() {
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [whatsappFallbackUrl, setWhatsappFallbackUrl] = useState<string>("");
 
-  // Listen for hash parameter to auto-select course or mode
+  // Listen for hash parameter to auto-select class, subject, or mode
   useEffect(() => {
     const handleHash = () => {
       const hash = window.location.hash;
       if (hash.includes("?")) {
         const queryPart = hash.split("?")[1];
         const params = new URLSearchParams(queryPart);
-        const courseParam = params.get("course");
+        const classParam = params.get("class");
+        const subjectParam = params.get("subject");
         const modeParam = params.get("mode");
 
-        if (courseParam) {
-          setFormData((prev) => ({ ...prev, course: courseParam }));
+        if (classParam && ["Class 5", "Class 6", "Class 7", "Class 8", "Class 9", "Class 10"].includes(classParam)) {
+          setFormData((prev) => ({ ...prev, studentClass: classParam }));
+        }
+        if (subjectParam && ["Mathematics", "Physics", "Chemistry"].includes(subjectParam)) {
+          setFormData((prev) => ({ ...prev, subject: subjectParam }));
         }
         if (modeParam && ["Online", "Offline", "Not Sure"].includes(modeParam)) {
           setFormData((prev) => ({ ...prev, mode: modeParam }));
@@ -67,8 +71,12 @@ export default function ContactSection() {
       newErrors.phone = "Please enter a valid 10-digit mobile number.";
     }
 
-    if (!formData.course.trim()) {
-      newErrors.course = "Please select or specify your course of interest.";
+    if (!formData.studentClass) {
+      newErrors.studentClass = "Please select an academic class (Class 5 to 10).";
+    }
+
+    if (!formData.subject) {
+      newErrors.subject = "Please select a subject of interest.";
     }
 
     setErrors(newErrors);
@@ -107,9 +115,10 @@ export default function ContactSection() {
         `Hello Vidhyas IIT Academy,
 Name: ${formData.fullName}
 Phone: ${formData.phone}
-Class/Program: ${formData.course}
+Class: ${formData.studentClass}
+Subject: ${formData.subject}
 Mode: ${formData.mode}
-${formData.message ? `Notes: ${formData.message}` : "Please share batch details, diagnostic assessment, and fee structure."}`
+${formData.message ? `Notes: ${formData.message}` : "Please share batch details, diagnostic assessment schedule, and curriculum information."}`
       );
       setWhatsappFallbackUrl(fallbackUrl);
       setSubmitSuccess(true);
@@ -122,7 +131,8 @@ ${formData.message ? `Notes: ${formData.message}` : "Please share batch details,
     setFormData({
       fullName: "",
       phone: "",
-      course: "",
+      studentClass: "",
+      subject: "",
       mode: "Not Sure",
       message: "",
       honeypot: "",
@@ -137,10 +147,10 @@ ${formData.message ? `Notes: ${formData.message}` : "Please share batch details,
         <div className="section-header">
           <span className="section-eyebrow">Admissions &amp; Diagnostic Assessment</span>
           <h2 id="contact-heading" className="section-title">
-            Unlock Your Child&apos;s True Mathematical Potential
+            Unlock Your Child&apos;s True Academic Potential
           </h2>
           <p className="section-desc">
-            Don&apos;t wait until Class 11 to discover foundational learning gaps. Give your child the competitive edge of mathematical intuition and confidence today.
+            Build strong conceptual foundations early. Give your child the competitive edge of conceptual understanding, analytical thinking, and confidence in Mathematics, Physics, and Chemistry today.
           </p>
         </div>
 
@@ -157,12 +167,12 @@ ${formData.message ? `Notes: ${formData.message}` : "Please share batch details,
                   style={{ objectFit: "contain", flexShrink: 0 }}
                 />
                 <div>
-                  <span className={styles.infoEyebrow}>Premier Mathematics Coaching</span>
+                  <span className={styles.infoEyebrow}>Classes 5 to 10 Foundation Coaching</span>
                   <h3 className={styles.instituteName} style={{ margin: 0 }}>{siteConfig.name}</h3>
                 </div>
               </div>
               <p className={styles.infoIntro}>
-                Transform Mathematical Fear into Mastery: Build a Bulletproof IIT-JEE &amp; Olympiad Foundation Early for Classes 5th to 10th.
+                Transform Mathematical Fear into Mastery: Build a Bulletproof Foundation Early in Mathematics, Physics &amp; Chemistry for Classes 5 to 10.
               </p>
 
               <div className={styles.contactList}>
@@ -333,42 +343,61 @@ ${formData.message ? `Notes: ${formData.message}` : "Please share batch details,
                   )}
                 </div>
 
-                {/* Course Interested In */}
+                {/* Academic Class Selection */}
                 <div className={styles.fieldGroup}>
-                  <label htmlFor="course" className={styles.fieldLabel}>
-                    Grade / Program Interested In <span className={styles.requiredStar}>*</span>
+                  <label htmlFor="studentClass" className={styles.fieldLabel}>
+                    Select Class <span className={styles.requiredStar}>*</span>
                   </label>
                   <select
-                    id="course"
-                    name="course"
-                    value={formData.course}
+                    id="studentClass"
+                    name="studentClass"
+                    value={formData.studentClass}
                     onChange={(e) =>
-                      setFormData({ ...formData, course: e.target.value })
+                      setFormData({ ...formData, studentClass: e.target.value })
                     }
-                    className={`${styles.select} ${errors.course ? styles.inputError : ""}`}
+                    className={`${styles.select} ${errors.studentClass ? styles.inputError : ""}`}
                     aria-required="true"
-                    aria-invalid={!!errors.course}
+                    aria-invalid={!!errors.studentClass}
                   >
-                    <option value="">-- Select Grade or Program --</option>
-                    <optgroup label="Comprehensive Grade Pathways">
-                      <option value="Class 5: Sub-Junior Foundation">Class 5: Sub-Junior Foundation</option>
-                      <option value="Class 6: Junior Foundation – Level 1">Class 6: Junior Foundation – Level 1</option>
-                      <option value="Class 7: Junior Foundation – Level 2">Class 7: Junior Foundation – Level 2</option>
-                      <option value="Class 8: Pre-Senior Foundation">Class 8: Pre-Senior Foundation</option>
-                      <option value="Class 9: Senior Foundation – Level 1">Class 9: Senior Foundation – Level 1</option>
-                      <option value="Class 10: Senior Foundation – Level 2 & JEE Bridge">Class 10: Senior Foundation – Level 2 & JEE Bridge</option>
-                      <option value="Diagnostic Assessment Test">Diagnostic Assessment Test (1-on-1)</option>
-                    </optgroup>
-                    <optgroup label="Specific Curriculum Modules">
-                      {ALL_COURSES.map((c) => (
-                        <option key={c.id} value={`${c.name} (${c.category})`}>
-                          {c.name} ({c.category})
-                        </option>
-                      ))}
-                    </optgroup>
+                    <option value="">-- Select Class (Classes 5 to 10) --</option>
+                    <option value="Class 5">Class 5</option>
+                    <option value="Class 6">Class 6</option>
+                    <option value="Class 7">Class 7</option>
+                    <option value="Class 8">Class 8</option>
+                    <option value="Class 9">Class 9</option>
+                    <option value="Class 10">Class 10</option>
                   </select>
-                  {errors.course && (
-                    <span className={styles.errorMessage}>{errors.course}</span>
+                  {errors.studentClass && (
+                    <span className={styles.errorMessage}>{errors.studentClass}</span>
+                  )}
+                </div>
+
+                {/* Subject Selection */}
+                <div className={styles.fieldGroup}>
+                  <label htmlFor="subject" className={styles.fieldLabel}>
+                    Select Subject <span className={styles.requiredStar}>*</span>
+                  </label>
+                  <select
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={(e) =>
+                      setFormData({ ...formData, subject: e.target.value })
+                    }
+                    className={`${styles.select} ${errors.subject ? styles.inputError : ""}`}
+                    aria-required="true"
+                    aria-invalid={!!errors.subject}
+                  >
+                    <option value="">-- Select Subject --</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Physics">Physics</option>
+                    <option value="Chemistry">Chemistry</option>
+                    <option value="All Three (Mathematics, Physics & Chemistry)">
+                      All Three (Mathematics, Physics &amp; Chemistry)
+                    </option>
+                  </select>
+                  {errors.subject && (
+                    <span className={styles.errorMessage}>{errors.subject}</span>
                   )}
                 </div>
 
@@ -403,7 +432,7 @@ ${formData.message ? `Notes: ${formData.message}` : "Please share batch details,
                     id="message"
                     name="message"
                     rows={3}
-                    placeholder="Tell us about your child's current school, math performance, or targets..."
+                    placeholder="Tell us about your child's current school, learning goals, or questions..."
                     value={formData.message}
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })

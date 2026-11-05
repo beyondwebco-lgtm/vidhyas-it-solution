@@ -20,22 +20,25 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.baseUrl),
   title: {
-    default: "Vidhyas IIT Academy | Premier Mathematics Coaching for Classes 5th to 10th",
+    default: "Vidhyas IIT Academy | Mathematics, Physics & Chemistry Coaching for Classes 5 to 10",
     template: "%s | Vidhyas IIT Academy",
   },
   description:
-    "Transform Mathematical Fear into Mastery: Build a Bulletproof IIT-JEE & Olympiad Foundation Early. Concept-first mathematics training for Classes 5 to 10 by Vidhyas IIT Academy.",
+    "Transform Academic Learning: Build a Strong Foundation Early. Concept-first coaching in Mathematics, Physics, and Chemistry for Classes 5 to 10 by Vidhyas IIT Academy.",
   keywords: [
     "Vidhyas IIT Academy",
     "Mathematics coaching for classes 5 to 10",
-    "IIT JEE Foundation coaching Suchitra Hyderabad",
+    "Physics coaching for classes 5 to 10",
+    "Chemistry coaching for classes 5 to 10",
+    "Classes 5 to 10 foundation coaching Suchitra Hyderabad",
+    "IIT Foundation coaching Suchitra Hyderabad",
     "IOQM preparation Hyderabad",
     "NMTC mathematics coaching",
-    "Olympiad math classes for Class 5 to 10",
-    "Class 5 sub-junior foundation math",
-    "Class 10 JEE bridge course",
-    "Concept-first maths coaching",
-    "Small batch math mentorship Suchitra",
+    "Science and Math Olympiad classes for Class 5 to 10",
+    "Class 5 foundation coaching",
+    "Class 10 foundation coaching",
+    "Concept-first coaching",
+    "Small batch mentorship Suchitra",
   ],
   authors: [{ name: "Vidhyas IIT Academy" }],
   creator: "Vidhyas IIT Academy",
@@ -53,23 +56,23 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: siteConfig.baseUrl,
     siteName: "Vidhyas IIT Academy",
-    title: "Vidhyas IIT Academy | Premier Mathematics Coaching for Classes 5th to 10th",
+    title: "Vidhyas IIT Academy | Mathematics, Physics & Chemistry Coaching for Classes 5 to 10",
     description:
-      "Transform Mathematical Fear into Mastery: Build a Bulletproof IIT-JEE & Olympiad Foundation Early. Concept-first coaching for Classes 5 to 10.",
+      "Transform Academic Learning: Build a Strong Foundation Early. Concept-first coaching in Mathematics, Physics, and Chemistry for Classes 5 to 10.",
     images: [
       {
         url: "/images/math-hero-classroom.jpg",
         width: 1200,
         height: 675,
-        alt: "Vidhyas IIT Academy Mathematics Coaching for Classes 5th to 10th",
+        alt: "Vidhyas IIT Academy Coaching for Classes 5 to 10",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vidhyas IIT Academy | Mathematics Coaching (Classes 5th - 10th)",
+    title: "Vidhyas IIT Academy | Coaching for Classes 5 to 10",
     description:
-      "Transform Mathematical Fear into Mastery: Build a Bulletproof IIT-JEE & Olympiad Foundation Early.",
+      "Transform Academic Learning: Build a Strong Foundation Early in Mathematics, Physics, and Chemistry.",
     images: ["/images/math-hero-classroom.jpg"],
   },
   icons: {
@@ -121,12 +124,12 @@ export default function RootLayout({
         },
         hasOfferCatalog: {
           "@type": "OfferCatalog",
-          name: "Class-by-Class Mathematics Curriculum (Classes 5 to 10)",
+          name: "Class-by-Class Curriculum for Classes 5 to 10 (Mathematics, Physics & Chemistry)",
           itemListElement: ALL_COURSES.map((course, idx) => ({
             "@type": "Course",
             position: idx + 1,
             name: `${course.name} (${course.category})`,
-            description: `${course.description} Olympiad Edge: ${course.olympiadEdge || ""}`,
+            description: `${course.description} ${course.olympiadEdge ? `Academic Edge: ${course.olympiadEdge}` : ""}`,
             provider: {
               "@id": `${siteConfig.baseUrl}/#organization`,
             },

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { MapPin, Phone, MessageCircle } from "lucide-react";
-import { siteConfig, getDefaultWhatsAppUrl } from "@/data/siteConfig";
+import { siteConfig } from "@/data/siteConfig";
 import { COURSE_CATEGORIES } from "@/data/courses";
 import PrivacyModal from "./PrivacyModal";
 import styles from "./Footer.module.css";
@@ -43,19 +43,8 @@ export default function Footer({ currentYear = 2026 }: FooterProps) {
                 </div>
               </div>
               <p className={styles.brandDesc}>
-                {siteConfig.intro} Providing concept-first mathematics coaching and IIT-JEE foundation in Suchitra, Hyderabad.
+                {siteConfig.intro} Providing concept-first coaching in Mathematics, Physics, and Chemistry for Classes 5 to 10 in Suchitra, Hyderabad.
               </p>
-              <div style={{ marginTop: "auto" }}>
-                <a
-                  href={getDefaultWhatsAppUrl()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-whatsapp btn-sm"
-                >
-                  <MessageCircle size={15} aria-hidden="true" />
-                  <span>Enquire on WhatsApp</span>
-                </a>
-              </div>
             </div>
 
             {/* Column 2: Quick Links */}
@@ -69,7 +58,7 @@ export default function Footer({ currentYear = 2026 }: FooterProps) {
                 </li>
                 <li>
                   <Link href="#about" className={styles.footerLink}>
-                    About Methodology
+                    About Methodology (Root2Rank)
                   </Link>
                 </li>
                 <li>

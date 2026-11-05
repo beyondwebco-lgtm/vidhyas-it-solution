@@ -6,13 +6,13 @@ const STEPS = [
   {
     number: "01",
     title: "Select Grade & Target",
-    description: "Choose your child's current school grade (Class 5 to 10) and primary target: School Exam Mastery, Olympiads (IOQM/NMTC), or IIT-JEE Foundation.",
+    description: "Choose your child's current school grade (Class 5 to 10) and primary target: School Exam Mastery, Olympiads (IOQM/NMTC/NSO), or Strong Foundation in Mathematics, Physics, and Chemistry.",
     icon: BookOpen,
   },
   {
     number: "02",
     title: "Diagnostic Assessment",
-    description: "Connect with us on WhatsApp or call to schedule a baseline conceptual diagnostic evaluation to pinpoint learning strengths and gaps.",
+    description: "Connect with us on WhatsApp or call to schedule a baseline conceptual diagnostic evaluation in Mathematics, Physics, or Chemistry.",
     icon: PhoneCall,
   },
   {
@@ -33,7 +33,7 @@ export default function HowToStart() {
             How to Get Started
           </h2>
           <p className="section-desc">
-            Beginning your child&apos;s journey from mathematical fear to competitive mastery is structured, transparent, and diagnostic-led.
+            Beginning your child&apos;s journey toward conceptual confidence and competitive mastery is structured, transparent, and diagnostic-led.
           </p>
         </div>
 

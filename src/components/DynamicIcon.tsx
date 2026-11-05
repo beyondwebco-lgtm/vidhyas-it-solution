@@ -27,6 +27,9 @@ import {
   GraduationCap,
   BookMarked,
   HelpCircle,
+  Atom,
+  FlaskConical,
+  Zap,
   LucideProps,
 } from "lucide-react";
 
@@ -88,6 +91,12 @@ export default function DynamicIcon({ name, ...props }: DynamicIconProps) {
       return <GraduationCap {...props} />;
     case "BookMarked":
       return <BookMarked {...props} />;
+    case "Atom":
+      return <Atom {...props} />;
+    case "FlaskConical":
+      return <FlaskConical {...props} />;
+    case "Zap":
+      return <Zap {...props} />;
     default:
       return <HelpCircle {...props} />;
   }
