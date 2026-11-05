@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Check, Sparkles } from "lucide-react";
 import styles from "./AboutUs.module.css";
 
-const ROOT_2_RANK_STEPS = [
+const VIDYAS_METHODOLOGY_STEPS = [
   {
     step: "1. Diagnostic",
     title: "Diagnostic",
@@ -65,14 +65,14 @@ export default function AboutUs() {
           <div className={styles.imageCard}>
             <Image
               src="/images/math-about-framework.jpg"
-              alt="Vidhyas IIT Academy - Root2Rank Learning Methodology for Classes 5 to 10"
+              alt="Vidyas IIT Academy Learning Methodology for Classes 5 to 10"
               fill
               sizes="(max-width: 1024px) 100vw, 520px"
               className={styles.image}
             />
             <div className={styles.imageFloatingPill}>
               <Sparkles size={14} color="#0284c7" />
-              <span>Root2Rank Methodology</span>
+              <span>Vidyas IIT Academy Methodology</span>
             </div>
           </div>
         </div>
@@ -82,15 +82,15 @@ export default function AboutUs() {
           <span className="section-eyebrow">Teaching Methodology</span>
           
           <h2 id="about-heading" className={styles.aboutTitle}>
-            Our Root2Rank Learning Methodology
+            Our Vidyas IIT Academy Learning Methodology
           </h2>
 
           <p className={styles.aboutText}>
-            Our structured Root2Rank classroom methodology dismantles rote memorization and rebuilds concepts visually and logically. We train students from Class 5 to 10 to develop deep conceptual clarity, sustained analytical stamina, and multi-concept problem synthesis across Mathematics, Physics, and Chemistry.
+            Our structured Vidyas IIT Academy classroom methodology dismantles rote memorization and rebuilds concepts visually and logically. We train students from Class 5 to 10 to develop deep conceptual clarity, sustained analytical stamina, and multi-concept problem synthesis across Mathematics, Physics, and Chemistry.
           </p>
 
           <div className={styles.featuresList}>
-            {ROOT_2_RANK_STEPS.map((item) => (
+            {VIDYAS_METHODOLOGY_STEPS.map((item) => (
               <div key={item.title} className={styles.featureRow}>
                 <span className={styles.featureDot} aria-hidden="true">
                   <Check size={13} strokeWidth={3} />

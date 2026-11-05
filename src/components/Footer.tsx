@@ -58,7 +58,7 @@ export default function Footer({ currentYear = 2026 }: FooterProps) {
                 </li>
                 <li>
                   <Link href="#about" className={styles.footerLink}>
-                    About Methodology (Root2Rank)
+                    About Methodology
                   </Link>
                 </li>
                 <li>
